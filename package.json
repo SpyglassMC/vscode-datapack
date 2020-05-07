@@ -1683,6 +1683,39 @@
                     "markdownDescription": "%datapack.config.lint.strictTeamCheck%",
                     "default": null
                 },
+                "datapack.lint.strictAttributeCheck": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "hint",
+                                        "information",
+                                        "warning",
+                                        "error"
+                                    ]
+                                },
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "always",
+                                        "only-default-namespace"
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "markdownDescription": "%datapack.config.lint.strictAttributeCheck%",
+                    "default": [
+                        "error",
+                        "only-default-namespace"
+                    ]
+                },
                 "datapack.lint.strictBlockCheck": {
                     "oneOf": [
                         {

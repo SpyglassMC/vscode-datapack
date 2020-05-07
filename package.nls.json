@@ -63,6 +63,7 @@
     "datapack.config.lint.selectorSortKeys": "Enforce the values in an entity selector to be sorted by the keys.",
     "datapack.config.lint.selectorTrailingComma": "Whether there should be a trailing comma after the last key-value pair in entity selectors or not.",
     "datapack.config.lint.strictAdvancementCheck": "Show diagnostics for advancements that don't exist in the current workspace.",
+    "datapack.config.lint.strictAttribute": "Show diagnostics for attributes that don't exist in the registry.",
     "datapack.config.lint.strictBlockCheck": "Show diagnostics for blocks that don't exist in the registry.",
     "datapack.config.lint.strictBlockTagCheck": "Show diagnostics for block tags that don't exist in the current workspace.",
     "datapack.config.lint.strictBossbarCheck": "Show diagnostics for bossbars that haven't been defined in the workspace.",
