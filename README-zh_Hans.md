@@ -8,7 +8,7 @@
 [![VSCode Marketplace Rating](https://img.shields.io/visual-studio-marketplace/stars/SPGoding.datapack-language-server.svg?logo=visual-studio-code&style=flat-square)](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server)
 [![License](https://img.shields.io/github/license/SPGoding/vscode-datapack-helper-plus.svg?style=flat-square)](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/LICENSE)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
 Datapack Helper Plus，简称 DHP，中文名大憨批，是一组能够为 Minecraft Java版的数据包文件（包括进度、函数、战利品表、断言、配方、各种标签）提供支持的插件。您可以将其安装在 [VSCode](https://code.visualstudio.com/) 编辑器上。
 
@@ -284,3 +284,5 @@ _该特性依赖于 proposed 阶段的 API，只能在开发环境下使用。_
 - 如果您有微软帐号的话，在本人的[插件发布页](https://marketplace.visualstudio.com/items?itemName=SPGoding.datapack-language-server&ssr=false#review-details)给一个五星好评。
 - 如果您有 CBer 朋友的话，把大憨批安利给 TA；
 - 如果您有钱的话，本人有一个[爱发电](https://afdian.net/@SPGoding)页面。
+
+[afd]SPGoding[/afd]
