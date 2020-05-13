@@ -1127,7 +1127,7 @@
                     "markdownDescription": "%datapack.config.lint.nbtTypeCheck%",
                     "default": [
                         "warning",
-                        "strictly"
+                        "loosely"
                     ]
                 },
                 "datapack.lint.selectorSortKeys": {
