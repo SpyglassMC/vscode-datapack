@@ -75,11 +75,11 @@ function spgoding:foo
 | 日语     | `ja`               |
 | 简体中文 | `zh-cn`            |
 
-如果您愿意帮助翻译大憨批至其他语言，我们将不胜感激！请查看 [CONTRIBUTING.md](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/CONTRIBUTING.md) 了解更多信息。
+如果您愿意帮助翻译大憨批至其他语言，我们将不胜感激！请查看 [CONTRIBUTING.md](https://github.com/SPGoding/datapack-language-server/blob/master/CONTRIBUTING.md) 了解更多信息。
 
 ## 语义化高亮
 
-> Wiki: https://github.com/SPGoding/vscode-datapack-helper-plus/wiki/Semantic-Coloring
+> Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Semantic-Coloring
 
 所有命令参数都可以被语义化高亮。我们同时建议您安装 
 [Arcensoth](https://github.com/Arcensotj) 的 [language-mcfunction extension](https://github.com/Arcensoth/language-mcfunction)
@@ -122,7 +122,7 @@ function spgoding:foo
 
 ## 定义注释
 
-> Wiki: https://github.com/SPGoding/vscode-datapack-helper-plus/wiki/Define-Comment
+> Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Define-Comment
 
 你可以使用形如 `#define <类型：字符串> <标识符: 字符串> [<描述: 字符串>]` 的格式来定义一个字符串。这些被定义的内容将会参与到补全提示的计算、符号的重命名、查找引用或定义等操作当中。Minecraft 本身会把这些定义注释当作普通的注释并直接忽略掉，只有大憨批会读取这些注释。
 
@@ -130,7 +130,7 @@ function spgoding:foo
 
 ## 别名注释
 
-> Wiki: https://github.com/SPGoding/vscode-datapack-helper-plus/wiki/Alias-Comment
+> Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Alias-Comment
 
 你可以使用形如 `#alias <类型：字符串> <别名: 字符串> <值: 字符串>` 的格式来定义一个字符串别名，其将会出现在指定参数的补全列表中。
 
@@ -138,7 +138,7 @@ function spgoding:foo
 
 ## 错误提示与代码操作
 
-> 代码操作的 Wiki：https://github.com/SPGoding/vscode-datapack-helper-plus/wiki/Code-Actions
+> 代码操作的 Wiki：https://github.com/SPGoding/datapack-language-server/wiki/Code-Actions
 
 大憨批能够提供实时的错误提示。它既能像 Minecraft 一样展现语法错误，也能给予你更加详细的警告信息。
 
@@ -148,7 +148,7 @@ function spgoding:foo
 
 ## 格式化与校验
 
-> Wiki：https://github.com/SPGoding/vscode-datapack-helper-plus/wiki/Lint-Rules
+> Wiki：https://github.com/SPGoding/datapack-language-server/wiki/Lint-Rules
 
 您可以通过按下 Shift + Alt + F 或其他自行设定的快捷键来格式化当前文档。
 
@@ -248,20 +248,20 @@ _该特性依赖于 proposed 阶段的 API，只能在开发环境下使用。_
 
 感谢所有大憨批的贡献者！
 
-## 2.0.0 版本的贡献者
+## 2.0.1 版本的贡献者
 
-![0.png](https://i.loli.net/2020/04/28/j8LpReVzNW9Cr5g.png)
-![1.png](https://i.loli.net/2020/04/28/pfmohyGReE6HP7i.png)
+![0.png](https://i.loli.net/2020/05/15/4DC9hsTJKmnPEwk.png)
 
-[点此](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/contributors/2.0.0.md)查看详细列表。
+[点此](https://github.com/SPGoding/datapack-language-server/blob/master/contributors/2.0.1.md)查看详细列表。
 
 ## 往期版本贡献者
 
-- [1.x.x](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/contributors/1.x.x.md)
+- [1.0.0](https://github.com/SPGoding/datapack-language-server/blob/master/contributors/1.0.0.md)
+- [2.0.0](https://github.com/SPGoding/datapack-language-server/blob/master/contributors/2.0.0.md)
 
 ## 贡献
 
-如果您有意进行贡献，可以[提交漏洞或建议](https://github.com/SPGoding/vscode-datapack-helper-plus/issues/new)、[给我打钱](https://afdian.net/@SPGoding)等。
+如果您有意进行贡献，可以[提交漏洞或建议](https://github.com/SPGoding/datapack-language-server/issues/new)、[给我打钱](https://afdian.net/@SPGoding)等。
 
 查看 [CONTRIBUTING.md](./CONTRIBUTING.md) 以获取更多信息。
 
@@ -273,7 +273,7 @@ _该特性依赖于 proposed 阶段的 API，只能在开发环境下使用。_
 
 ## 有漏洞/少功能！
 
-请把您的意见、建议、遇到的问题等发布在 [GitHub issues](https://github.com/SPGoding/vscode-datapack-helper-plus/issues/new)，或直接回复在论坛发布帖之下。发布在 GitHub 有利于本人对其进行追踪，发布在论坛有利于我个人给予您相应积分奖励。请**不要**在两处都进行反馈。
+请把您的意见、建议、遇到的问题等发布在 [GitHub issues](https://github.com/SPGoding/datapack-language-server/issues/new)，或直接回复在论坛发布帖之下。发布在 GitHub 有利于本人对其进行追踪，发布在论坛有利于我个人给予您相应积分奖励。请**不要**在两处都进行反馈。
 
 ## 大憨批真好用！
 
