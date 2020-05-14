@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "datapack-language-server": "latest",
+        "datapack-language-server": "^2.0.1",
         "vscode-languageclient": "^6.1.3"
     },
     "devDependencies": {
