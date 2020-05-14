@@ -250,7 +250,7 @@ _该特性依赖于 proposed 阶段的 API，只能在开发环境下使用。_
 
 ## 2.0.1 版本的贡献者
 
-![0.png](https://i.loli.net/2020/05/15/4DC9hsTJKmnPEwk.png)
+![0.png](https://i.loli.net/2020/05/15/TOnHtzq2divo5Ux.png)
 
 [点此](https://github.com/SPGoding/datapack-language-server/blob/master/contributors/2.0.1.md)查看详细列表。
 
