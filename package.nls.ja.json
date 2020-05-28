@@ -93,5 +93,6 @@
     "datapack.config.lint.timeOmitTickUnit": "時間を入力する引数でtickの単位(`t`)を省略する",
     "datapack.config.snippets": "コードスニペット",
     "datapack.description": "MCFunctionファイル用の言語機能",
-    "datapack.displayName": "Datapack Helper Plus (MCF)"
+    "datapack.displayName": "Datapack Helper Plus (MCF)",
+    "datapack.config.lint.strictAttributeCheck": "不明なattributeに対して警告する"
 }
