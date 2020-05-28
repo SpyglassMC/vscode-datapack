@@ -1,1 +1,4 @@
-{}
+{
+    "datapack.config.features.codeActions": "請確認DHP是否有提供此操作。",
+    "datapack.commands.regenerateCache.title": "重新生成快取"
+}
