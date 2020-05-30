@@ -63,6 +63,7 @@
     "datapack.config.lint.selectorSortKeys": "是否将实体选择器中的值按键排序。",
     "datapack.config.lint.selectorTrailingComma": "实体选择器的最后一个键值对之后是否应当有尾逗号。",
     "datapack.config.lint.strictAdvancementCheck": "是否为当前工作区内不存在的进度显示警告。",
+    "datapack.config.lint.strictAttributeCheck": "是否为未知的属性显示警告。",
     "datapack.config.lint.strictBlockCheck": "是否为未知的方块显示警告。",
     "datapack.config.lint.strictBlockTagCheck": "是否为当前工作区内不存在的方块标签显示警告。",
     "datapack.config.lint.strictBossbarCheck": "是否为未定义的 bossbar 显示警告。",
