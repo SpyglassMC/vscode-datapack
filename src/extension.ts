@@ -92,7 +92,6 @@ export function activate(context: ExtensionContext) {
             }
             context.globalState.update('lastVersion', currentVersion)
         })
-
         context.subscriptions.push(
             languages.registerDocumentSemanticTokensProvider(
                 { language: 'mcfunction' },
