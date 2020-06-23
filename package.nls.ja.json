@@ -6,6 +6,7 @@
     "datapack.config.env.dependsOnVanilla": "このデータパックをVanillaデータパックに依存させる 有効にするとVanillaデータパックのデータ補完が提供されます。",
     "datapack.config.env.exclude": "検証から除外するファイル ここに記載される文字列はグロブパターンとして、データパックのルートからの相対ファイルパスとして指定します。",
     "datapack.config.env.include": "検証に含めるファイル ここに記載される文字列はグロブパターンとして、データパックのルートからの相対ファイルパスとして指定します。\nこの設定は`除外`よりも優先されます。",
+    "datapack.config.env.language": "言語サーバーが提供するメッセージの言語",
     "datapack.config.env.permissionLevel": "`server.properties`で定義される`function-permission-level`",
     "datapack.config.features.codeActions": "DHPのコードアクション機能を使用する",
     "datapack.config.features.colors": "DHPのカラーサポート機能を使用する",
@@ -63,6 +64,7 @@
     "datapack.config.lint.selectorSortKeys": "セレクターの引数の順番を強制する",
     "datapack.config.lint.selectorTrailingComma": "セレクターの最後のキーと値のペアの後にコンマを必要とする",
     "datapack.config.lint.strictAdvancementCheck": "ワークスペースに存在しないadvancementに対して警告する",
+    "datapack.config.lint.strictAttributeCheck": "不明なattributeに対して警告する",
     "datapack.config.lint.strictBlockCheck": "不明なblockに対して警告する",
     "datapack.config.lint.strictBlockTagCheck": "ワークスペースに存在しないblock tagsに対して警告する",
     "datapack.config.lint.strictBossbarCheck": "未定義のbossbarに対して警告する",
@@ -93,6 +95,5 @@
     "datapack.config.lint.timeOmitTickUnit": "時間を入力する引数でtickの単位(`t`)を省略する",
     "datapack.config.snippets": "コードスニペット",
     "datapack.description": "MCFunctionファイル用の言語機能",
-    "datapack.displayName": "Datapack Helper Plus (MCF)",
-    "datapack.config.lint.strictAttributeCheck": "不明なattributeに対して警告する"
+    "datapack.displayName": "Datapack Helper Plus (MCF)"
 }
