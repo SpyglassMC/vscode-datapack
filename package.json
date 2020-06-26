@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "^2.1.0",
+        "@spgoding/datapack-language-server": "^2.1.1",
         "vscode-languageclient": "^6.1.3"
     },
     "devDependencies": {
@@ -2096,6 +2096,11 @@
                 }
             }
         },
+        "configurationDefaults": {
+            "[mcfunction]": {
+                "editor.semanticHighlighting.enabled": true
+            }
+        },
         "semanticTokenTypes": [
             {
                 "id": "annotation",
@@ -2126,6 +2131,10 @@
             {
                 "id": "firstArgument",
                 "description": "The first argument in a command"
+            },
+            {
+                "id": "inString",
+                "description": "The token is in a string"
             }
         ],
         "semanticTokenScopes": [

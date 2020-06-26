@@ -98,7 +98,7 @@ export function activate(context: ExtensionContext) {
                 new LspSemanticTokensProvider(),
                 new SemanticTokensLegend(
                     ['annotation', 'boolean', 'comment', 'entity', 'keyword', 'literal', 'identity', 'number', 'operator', 'property', 'string', 'type', 'variable', 'vector'],
-                    ['declaration', 'deprecated', 'documentation', 'firstArgument']
+                    ['declaration', 'deprecated', 'documentation', 'firstArgument', 'inString']
                 )
             )
         )
