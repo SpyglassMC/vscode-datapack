@@ -1,3 +1,8 @@
+# [v2.1.5](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v2.1.4...v2.1.5) (2020-06-28)
+
+## 🐛 Bug Fixes
+- [`5934ef8`](https://github.com/SPGoding/vscode-datapack-helper-plus/commit/5934ef8)  Update @spgoding/datapack-language-server to 2.1.5
+
 # [v2.1.4](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v2.1.3...v2.1.4) (2020-06-28)
 
 ## 🐛 Bug Fixes
