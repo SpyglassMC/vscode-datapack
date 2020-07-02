@@ -1,6 +1,6 @@
 {
     "name": "datapack-language-server",
-    "version": "2.1.14",
+    "version": "3.0.0-rc.2",
     "main": "dist/extension.js",
     "author": "SPGoding",
     "publisher": "SPGoding",
@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "^2.1.13",
+        "@spgoding/datapack-language-server": "^3.0.0-rc.2",
         "vscode-languageclient": "^6.1.3"
     },
     "devDependencies": {
@@ -68,23 +68,94 @@
         "mcfunction"
     ],
     "contributes": {
+        "jsonValidation": [
+            {
+                "fileMatch": [
+                    "pack.mcmeta",
+                    "data/*/advancements/*.json",
+                    "data/*/loot_tables/*.json",
+                    "data/*/predicates/*.json",
+                    "data/*/recipes/*.json",
+                    "data/*/tags/*.json",
+                    "data/minecraft/*.json"
+                ],
+                "url": "./resource/empty-object.json"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "datapack.createFile",
+                "key": "Alt+Shift+D Alt+Shift+C"
+            },
+            {
+                "command": "datapack.evaludateJavaScript",
+                "key": "Alt+Shift+D Alt+Shift+E"
+            },
+            {
+                "command": "datapack.redownloadData",
+                "key": "Alt+Shift+D Alt+Shift+D"
+            },
+            {
+                "command": "datapack.regenerateCache",
+                "key": "Alt+Shift+D Alt+Shift+G"
+            }
+        ],
         "languages": [
             {
                 "id": "mcfunction",
                 "extensions": [
-                    "mcfunction"
+                    ".mcfunction"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "json",
+                "extensions": [
+                    ".mcmeta"
+                ]
             }
         ],
         "commands": [
             {
+                "command": "datapack.createFile",
+                "title": "%datapack.commands.createFile.title%",
+                "category": "Datapack",
+                "enablement": "workspaceFolderCount != 0"
+            },
+            {
+                "command": "datapack.evaludateJavaScript",
+                "title": "%datapack.commands.evaludateJavaScript.title%",
+                "category": "Datapack",
+                "enablement": "editorLangId == mcfunction && editorHasSelection"
+            },
+            {
+                "command": "datapack.redownloadData",
+                "title": "%datapack.commands.redownloadData.title%",
+                "category": "Datapack"
+            },
+            {
                 "command": "datapack.regenerateCache",
                 "title": "%datapack.commands.regenerateCache.title%",
                 "category": "Datapack",
-                "enablement": "workspaceFolderCount != 0 && editorLangId == mcfunction"
+                "enablement": "workspaceFolderCount != 0"
             }
         ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "datapack.createFile",
+                    "when": "workspaceFolderCount != 0"
+                },
+                {
+                    "command": "datapack.evaludateJavaScript",
+                    "when": "editorLangId == mcfunction"
+                },
+                {
+                    "command": "datapack.regenerateCache",
+                    "when": "workspaceFolderCount != 0"
+                }
+            ]
+        },
         "configuration": {
             "title": "Datapack Language Server",
             "properties": {
@@ -99,10 +170,65 @@
                     "markdownDescription": "%datapack.config.env.permissionLevel%",
                     "default": 2
                 },
+                "datapack.env.defaultVisibility": {
+                    "markdownDescription": "%datapack.config.env.defaultVisibility%",
+                    "oneOf": [
+                        {
+                            "enum": [
+                                "private",
+                                "internal",
+                                "public"
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "enum": [
+                                        "advancement",
+                                        "dimension",
+                                        "dimension_type",
+                                        "function",
+                                        "loot_table",
+                                        "predicate",
+                                        "recipe",
+                                        "tag/block",
+                                        "tag/entity_type",
+                                        "tag/fluid",
+                                        "tag/function",
+                                        "tag/item",
+                                        "worldgen/biome",
+                                        "worldgen/configured_carver",
+                                        "worldgen/configured_decorator",
+                                        "worldgen/configured_feature",
+                                        "worldgen/configured_structure_feature",
+                                        "worldgen/configured_surface_builder",
+                                        "worldgen/processor_list",
+                                        "worldgen/template_pool",
+                                        "*"
+                                    ]
+                                },
+                                "pattern": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "type",
+                                "pattern"
+                            ]
+                        }
+                    ],
+                    "default": "public"
+                },
                 "datapack.env.dependsOnVanilla": {
                     "type": "boolean",
                     "markdownDescription": "%datapack.config.env.dependsOnVanilla%",
                     "default": true
+                },
+                "datapack.env.detectionDepth": {
+                    "type": "number",
+                    "markdownDescription": "%datapack.config.env.detectionDepth%",
+                    "default": 1
                 },
                 "datapack.env.cmdVersion": {
                     "type": "string",
@@ -145,6 +271,15 @@
                     },
                     "markdownDescription": "%datapack.config.env.include%",
                     "default": []
+                },
+                "datapack.env.jsonVersion": {
+                    "type": "string",
+                    "enum": [
+                        "1.15",
+                        "1.16"
+                    ],
+                    "markdownDescription": "%datapack.config.env.jsonVersion%",
+                    "default": "1.16"
                 },
                 "datapack.env.exclude": {
                     "type": "array",
@@ -239,6 +374,16 @@
                         "dataModifyStorageFromSelf": "data modify storage ${1:id} ${2:path} set from entity @s ${3:path}",
                         "summonAec": "summon minecraft:area_effect_cloud ~ ~ ~ {Age: -2147483648, Duration: -1, WaitTime: -2147483648, Tags: [\"${1:tag}\"]}"
                     }
+                },
+                "datapack.trace.server": {
+                    "type": "string",
+                    "enum": [
+                        "off",
+                        "messages",
+                        "verbose"
+                    ],
+                    "markdownDescription": "%datapack.trace.server%",
+                    "default": "off"
                 },
                 "datapack.lint.blockStateBracketSpacing": {
                     "type": "object",
@@ -879,6 +1024,37 @@
                     "markdownDescription": "%datapack.config.lint.nameOfTeams%",
                     "default": null
                 },
+                "datapack.lint.nbtArrayLengthCheck": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "hint",
+                                        "information",
+                                        "warning",
+                                        "error"
+                                    ]
+                                },
+                                {
+                                    "enum": [
+                                        true
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "markdownDescription": "%datapack.config.lint.nbtArrayLengthCheck%",
+                    "default": [
+                        "warning",
+                        true
+                    ]
+                },
                 "datapack.lint.nbtBoolean": {
                     "oneOf": [
                         {
@@ -991,6 +1167,34 @@
                         }
                     ],
                     "markdownDescription": "%datapack.config.lint.nbtCompoundSortKeys%",
+                    "default": null
+                },
+                "datapack.lint.nbtListLengthCheck": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "hint",
+                                        "information",
+                                        "warning",
+                                        "error"
+                                    ]
+                                },
+                                {
+                                    "enum": [
+                                        true
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "markdownDescription": "%datapack.config.lint.nbtListLengthCheck%",
                     "default": null
                 },
                 "datapack.lint.nbtPathQuote": {
@@ -2097,6 +2301,9 @@
             }
         },
         "configurationDefaults": {
+            "[json]": {
+                "editor.semanticHighlighting.enabled": true
+            },
             "[mcfunction]": {
                 "editor.semanticHighlighting.enabled": true
             }
@@ -2139,35 +2346,66 @@
         ],
         "semanticTokenScopes": [
             {
-                "language": "mcfunction",
                 "scopes": {
-                    "annotation": [
+                    "annotation:json": [
+                        "support.type.doc.annotation.json"
+                    ],
+                    "annotation:mcfunction": [
                         "support.type.doc.annotation.mcfunction"
                     ],
-                    "boolean": [
+                    "boolean:json": [
+                        "constant.language.boolean.json"
+                    ],
+                    "boolean:mcfunction": [
                         "constant.language.boolean.mcfunction"
                     ],
-                    "entity": [
+                    "entity:json": [
+                        "support.class.entity.json"
+                    ],
+                    "entity:mcfunction": [
                         "support.class.entity.mcfunction"
                     ],
-                    "literal": [
+                    "literal:json": [
+                        "keyword.other.json"
+                    ],
+                    "literal:mcfunction": [
                         "keyword.other.mcfunction"
                     ],
-                    "literal.firstArgument": [
+                    "literal.firstArgument:json": [
+                        "keyword.control.json"
+                    ],
+                    "literal.firstArgument:mcfunction": [
                         "keyword.control.mcfunction"
                     ],
-                    "identity": [
+                    "identity:json": [
+                        "entity.name.function.json"
+                    ],
+                    "identity:mcfunction": [
                         "entity.name.function.mcfunction"
                     ],
-                    "vector": [
+                    "vector:json": [
+                        "constant.numeric.vector.json"
+                    ],
+                    "vector:mcfunction": [
                         "constant.numeric.vector.mcfunction"
+                    ],
+                    "*.inString:json": [
+                        "markup.italic.in-string.json"
+                    ],
+                    "*.inString:mcfunction": [
+                        "markup.italic.in-string.mcfunction"
                     ]
                 }
             }
         ]
     },
     "activationEvents": [
+        "workspaceContains:**/pack.mcmeta",
         "onLanguage:mcfunction",
-        "onLanguage:mcfunction-snapshot"
+        "onLanguage:mcfunction-snapshot",
+        "onCommand:datapack.createFile",
+        "onCommand:datapack.evaludateJavaScript",
+        "onCommand:datapack.redownloadData",
+        "onCommand:datapack.regenerateCache"
     ]
 }

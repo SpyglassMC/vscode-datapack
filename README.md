@@ -10,33 +10,37 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
-Datapack Helper Plus can provide many heavy language features for documents in your datapack, including advancements, functions, loot tables, predicates, recipes, and all kinds of tags.
+Data-pack Helper Plus can provide many heavy language features for documents in your datapack, including advancements, dimensions, dimension types, functions, loot tables, predicates, recipes, all kinds of tags, and worldgen settings.
+
+If you like this extension, please consider [sponsoring](https://github.com/sponsors/SPGoding) me. You can also report bugs, suggest features, and help translations! See [CONTRIBUTING.md](https://github.com/SPGoding/datapack-language-server/blob/master/CONTRIBUTING.md) for more information.
 
 - [Disclaimer](#disclaimer)
 - [Installation](#installation)
 - [Features](#features)
-  - [Workspace Support](#workspace-support)
-  - [Multiple Language Support](#multiple-language-support)
-  - [Semantic Highlighting](#semantic-highlighting)
-  - [Signature Information](#signature-information)
-  - [Completions](#completions)
-  - [Code Snippets](#code-snippets)
-  - [Definition Comments](#definition-comments)
-  - [Alias Comments](#alias-comments)
-  - [Diagnostics and Code Actions](#diagnostics-and-code-actions)
-  - [Formatting and Linting](#formatting-and-linting)
-  - [Folding Ranges](#folding-ranges)
-  - [Call Hierarchy](#call-hierarchy)
-  - [Color Information](#color-information)
-  - [Hover Information](#hover-information)
-  - [Resolving Namespaced IDs](#resolving-namespaced-ids)
-  - [Goto Definitions](#goto-definitions)
-  - [Finding References](#finding-references)
-  - [Renaming](#renaming)
-  - [Configuration Settings](#configuration-settings)
-  - [Regenerating Cache](#regenerating-cache)
+   - [Workspace Support](#workspace-support)
+   - [Multiple Language Support](#multiple-language-support)
+   - [Semantic Highlighting](#semantic-highlighting)
+   - [Signature Information](#signature-information)
+   - [Completions](#completions)
+   - [Code Snippets](#code-snippets)
+   - [Declaration Comments](#declaration-comments)
+   - [Alias Comments](#alias-comments)
+   - [Diagnostics and Code Actions](#diagnostics-and-code-actions)
+   - [Formatting and Linting](#formatting-and-linting)
+   - [Folding Ranges](#folding-ranges)
+   - [Call Hierarchy](#call-hierarchy)
+   - [Color Information](#color-information)
+   - [Hover Information](#hover-information)
+   - [Resolving Namespaced IDs](#resolving-namespaced-ids)
+   - [Goto Definitions](#goto-definitions)
+   - [Finding References](#finding-references)
+   - [Renaming](#renaming)
+   - [Configuration Settings](#configuration-settings)
+   - [Regenerating Cache](#regenerating-cache)
 
 # Disclaimer
+
+> [MIT License](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/LICENSE)
 
 We tried our best to keep your datapacks safe. However, your documents might still be corrupted under certain extreme circumstances by DHP, and we couldn't provide any help if the said thing happened. Please **back up** your precious work from time to time like uploading it to a cloud storage, which is really important even if you choose not to use DHP!
 
@@ -148,13 +152,13 @@ DHP provides some helpful code snippets. See [VSCode's official docs](https://co
 
 ![code-snippets](https://raw.githubusercontent.com/SPGoding/vscode-datapack-helper-plus/master/img/code-snippets.gif)
 
-## Definition Comments
+## Declaration Comments
 
-> Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Define-Comment
+> Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Declare-Comment
 
-You can use `#define <type: string> <id: string> [<description: string>]` to define a string which will be used to compute completions, rename symbols, and find references/definitions by DHP. The game will treat definition comments as normal comments and simply ignore them.
+You can use `#declare|#define <type: string> <id: string> [<description: string>]` to declare a string which will be used to compute completions, rename symbols, and find references/definitions by DHP. The game will treat declaration comments as normal comments and simply ignore them.
 
-![definition-comments](https://raw.githubusercontent.com/SPGoding/vscode-datapack-helper-plus/master/img/definition-comments.png)
+![declaration-comments](https://raw.githubusercontent.com/SPGoding/vscode-datapack-helper-plus/master/img/declaration-comments.png)
 
 ## Alias Comments
 

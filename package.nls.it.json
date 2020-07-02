@@ -42,5 +42,5 @@
     "datapack.config.lint.timeOmitTickUnit": "Se omettere l'unita dei tick (`t`) nei argomenti riguardanti il tempo",
     "datapack.config.snippets": "Frammenti di codice",
     "datapack.description": "Configurazioni di lingua pesante per i file MCFunction",
-    "datapack.displayName": "Datapack Helper Plus (MCF)"
+    "datapack.displayName": "Data-pack Helper Plus"
 }
