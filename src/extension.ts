@@ -35,12 +35,13 @@ export function activate(context: ExtensionContext) {
     // Options to control the language client
     const clientOptions: LanguageClientOptions & { synchronize: { fileEvents: FileSystemWatcher[] } } = {
         documentSelector: [
-            { language: 'mcfunction' }
-            // { language: 'json', pattern: 'data/*/advancements/**.json' },
-            // { language: 'json', pattern: 'data/*/loot_tables/**.json' },
-            // { language: 'json', pattern: 'data/*/predicates/**.json' },
-            // { language: 'json', pattern: 'data/*/recipes/**.json' },
-            // { language: 'json', pattern: 'data/*/tags/{block,entity_types,fluids,functions,items}/**.json' }
+            { language: 'mcfunction' },
+            { language: 'json', scheme: 'file', pattern: 'data/*/advancements/**.json' },
+            { language: 'json', scheme: 'file', pattern: 'data/*/loot_tables/**.json' },
+            { language: 'json', scheme: 'file', pattern: 'data/*/predicates/**.json' },
+            { language: 'json', scheme: 'file', pattern: 'data/*/recipes/**.json' },
+            { language: 'json', scheme: 'file', pattern: 'data/*/tags/{block,entity_types,fluids,functions,items}/**.json' },
+            { language: 'json', scheme: 'file', pattern: 'data/minecraft/{dimension,dimension_type}/*/*.json' }
         ],
         synchronize: {
             fileEvents: []
