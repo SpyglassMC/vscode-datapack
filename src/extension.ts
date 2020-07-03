@@ -36,12 +36,7 @@ export function activate(context: ExtensionContext) {
     const clientOptions: LanguageClientOptions & { synchronize: { fileEvents: FileSystemWatcher[] } } = {
         documentSelector: [
             { language: 'mcfunction' },
-            { language: 'json', scheme: 'file', pattern: 'data/*/advancements/**.json' },
-            { language: 'json', scheme: 'file', pattern: 'data/*/loot_tables/**.json' },
-            { language: 'json', scheme: 'file', pattern: 'data/*/predicates/**.json' },
-            { language: 'json', scheme: 'file', pattern: 'data/*/recipes/**.json' },
-            { language: 'json', scheme: 'file', pattern: 'data/*/tags/{block,entity_types,fluids,functions,items}/**.json' },
-            { language: 'json', scheme: 'file', pattern: 'data/minecraft/{dimension,dimension_type}/*/*.json' }
+            { language: 'json', scheme: 'file', pattern: '**/data/*/*/**/*.json' }
         ],
         synchronize: {
             fileEvents: []

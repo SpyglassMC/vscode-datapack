@@ -2176,6 +2176,7 @@
         ]
     },
     "activationEvents": [
+        "workspaceContains:**/pack.mcmeta",
         "onLanguage:mcfunction",
         "onLanguage:mcfunction-snapshot"
     ]
