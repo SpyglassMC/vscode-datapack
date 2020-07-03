@@ -146,6 +146,15 @@
                     "markdownDescription": "%datapack.config.env.include%",
                     "default": []
                 },
+                "datapack.env.jsonVersion": {
+                    "type": "string",
+                    "enum": [
+                        "1.15",
+                        "1.16"
+                    ],
+                    "markdownDescription": "%datapack.config.env.jsonVersion%",
+                    "default": "1.16"
+                },
                 "datapack.env.exclude": {
                     "type": "array",
                     "items": {
