@@ -5,7 +5,7 @@
 
 import { join } from 'path'
 import { commands, DocumentSemanticTokensProvider, ExtensionContext, FileSystemWatcher, languages, RelativePattern, SemanticTokens, SemanticTokensEdits, SemanticTokensLegend, TextDocument, Uri, window, workspace } from 'vscode'
-import { LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient'
+import { DocumentSelector, LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient'
 
 let client: LanguageClient
 
@@ -32,12 +32,14 @@ export function activate(context: ExtensionContext) {
         }
     }
 
+    const documentSelector: DocumentSelector = [
+        { language: 'mcfunction' },
+        { language: 'json', scheme: 'file', pattern: '**/data/*/{advancements,functions,loot_tables,predicates,recipes,structures,tags,dimension,dimension_type,worldgen}/**/*.json' }
+    ]
+
     // Options to control the language client
     const clientOptions: LanguageClientOptions & { synchronize: { fileEvents: FileSystemWatcher[] } } = {
-        documentSelector: [
-            { language: 'mcfunction' },
-            { language: 'json', scheme: 'file', pattern: '**/data/*/*/**/*.json' }
-        ],
+        documentSelector,
         synchronize: {
             fileEvents: []
         },
@@ -90,7 +92,7 @@ export function activate(context: ExtensionContext) {
         })
         context.subscriptions.push(
             languages.registerDocumentSemanticTokensProvider(
-                { language: 'mcfunction' },
+                documentSelector,
                 new LspSemanticTokensProvider(),
                 new SemanticTokensLegend(
                     ['annotation', 'boolean', 'comment', 'entity', 'keyword', 'literal', 'identity', 'number', 'operator', 'property', 'string', 'type', 'variable', 'vector'],
