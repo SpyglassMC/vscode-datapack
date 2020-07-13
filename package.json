@@ -78,7 +78,7 @@
                     "data/*/tags/*.json",
                     "data/minecraft/*.json"
                 ],
-                "url": "./src/empty-object.json"
+                "url": "./resource/empty-object.json"
             }
         ],
         "keybindings": [

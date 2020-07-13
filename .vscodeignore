@@ -2,6 +2,7 @@
 */**
 
 !dist/*.js
+!resource/*.json
 !CHANGELOG.md
 !icon.png
 !LICENSE
