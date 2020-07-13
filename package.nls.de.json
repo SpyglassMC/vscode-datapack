@@ -91,7 +91,7 @@
     "datapack.config.lint.timeOmitTickUnit": "Ob in Zeitangaben die Einheit Tick (`t`) ausgelassen werden soll.",
     "datapack.config.snippets": "Codeschnipsel.",
     "datapack.description": "Umfangreiche Sprachfunktionen für MCFunction-Dateien",
-    "datapack.displayName": "Datapack Helper Plus (MCF)",
+    "datapack.displayName": "Data-pack Helper Plus",
     "datapack.config.features.documentLinks": "Ob DHP Links in Dokumenten anzeigen soll.",
     "datapack.config.lint.strictAttributeCheck": "Warnungen für unbekannte Attribute anzeigen."
 }

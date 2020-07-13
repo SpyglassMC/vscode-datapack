@@ -68,6 +68,29 @@
         "mcfunction"
     ],
     "contributes": {
+        "jsonValidation": [
+            {
+                "fileMatch": [
+                    "data/*/advancements/*.json",
+                    "data/*/loot_tables/*.json",
+                    "data/*/predicates/*.json",
+                    "data/*/recipes/*.json",
+                    "data/*/tags/*.json",
+                    "data/minecraft/*.json"
+                ],
+                "url": "./src/empty-object.json"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "datapack.regenerateCache",
+                "key": "Alt+Shift+D G"
+            },
+            {
+                "command": "datapack.regenerateCache",
+                "key": "Alt+Shift+D Alt+Shift+G"
+            }
+        ],
         "languages": [
             {
                 "id": "mcfunction",
@@ -83,16 +106,6 @@
                 "title": "%datapack.commands.regenerateCache.title%",
                 "category": "Datapack",
                 "enablement": "workspaceFolderCount != 0 && editorLangId == mcfunction"
-            }
-        ],
-        "keybindings": [
-            {
-                "command": "datapack.regenerateCache",
-                "key": "Alt+Shift+D G"
-            },
-            {
-                "command": "datapack.regenerateCache",
-                "key": "Alt+Shift+D Alt+Shift+G"
             }
         ],
         "configuration": {
