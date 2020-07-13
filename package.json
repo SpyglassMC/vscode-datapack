@@ -2184,28 +2184,54 @@
         ],
         "semanticTokenScopes": [
             {
-                "language": "mcfunction",
                 "scopes": {
-                    "annotation": [
+                    "annotation:json": [
+                        "support.type.doc.annotation.json"
+                    ],
+                    "annotation:mcfunction": [
                         "support.type.doc.annotation.mcfunction"
                     ],
-                    "boolean": [
+                    "boolean:json": [
+                        "constant.language.boolean.json"
+                    ],
+                    "boolean:mcfunction": [
                         "constant.language.boolean.mcfunction"
                     ],
-                    "entity": [
+                    "entity:json": [
+                        "support.class.entity.json"
+                    ],
+                    "entity:mcfunction": [
                         "support.class.entity.mcfunction"
                     ],
-                    "literal": [
+                    "literal:json": [
+                        "keyword.other.json"
+                    ],
+                    "literal:mcfunction": [
                         "keyword.other.mcfunction"
                     ],
-                    "literal.firstArgument": [
+                    "literal.firstArgument:json": [
+                        "keyword.control.json"
+                    ],
+                    "literal.firstArgument:mcfunction": [
                         "keyword.control.mcfunction"
                     ],
-                    "identity": [
+                    "identity:json": [
+                        "entity.name.function.json"
+                    ],
+                    "identity:mcfunction": [
                         "entity.name.function.mcfunction"
                     ],
-                    "vector": [
+                    "vector:json": [
+                        "constant.numeric.vector.json"
+                    ],
+                    "vector:mcfunction": [
                         "constant.numeric.vector.mcfunction"
+                    ],
+                    "*.inString:json": [
+                        "markup.italic.in-string.json"
+                    ],
+                    "*.inString:mcfunction": [
+                        "markup.italic.in-string.mcfunction"
                     ]
                 }
             }
