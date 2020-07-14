@@ -34,7 +34,7 @@ export function activate(context: ExtensionContext) {
 
     const documentSelector: DocumentSelector = [
         { language: 'mcfunction' },
-        { language: 'json', scheme: 'file', pattern: '**/data/*/{advancements,functions,loot_tables,predicates,recipes,structures,tags,dimension,dimension_type,worldgen}/**/*.json' }
+        { scheme: 'file', pattern: '**/data/*/{advancements,functions,loot_tables,predicates,recipes,structures,tags,dimension,dimension_type,worldgen}/**/*.json' }
     ]
 
     // Options to control the language client
