@@ -71,6 +71,7 @@
         "jsonValidation": [
             {
                 "fileMatch": [
+                    "pack.mcmeta",
                     "data/*/advancements/*.json",
                     "data/*/loot_tables/*.json",
                     "data/*/predicates/*.json",
@@ -95,9 +96,15 @@
             {
                 "id": "mcfunction",
                 "extensions": [
-                    "mcfunction"
+                    ".mcfunction"
                 ],
                 "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "json",
+                "extensions": [
+                    ".mcmeta"
+                ]
             }
         ],
         "commands": [
