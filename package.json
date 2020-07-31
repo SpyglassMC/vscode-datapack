@@ -933,6 +933,37 @@
                     "markdownDescription": "%datapack.config.lint.nameOfTeams%",
                     "default": null
                 },
+                "datapack.lint.nbtArrayLengthCheck": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "hint",
+                                        "information",
+                                        "warning",
+                                        "error"
+                                    ]
+                                },
+                                {
+                                    "enum": [
+                                        true
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "markdownDescription": "%datapack.config.lint.nbtArrayLengthCheck%",
+                    "default": [
+                        "warning",
+                        true
+                    ]
+                },
                 "datapack.lint.nbtBoolean": {
                     "oneOf": [
                         {
@@ -1045,6 +1076,34 @@
                         }
                     ],
                     "markdownDescription": "%datapack.config.lint.nbtCompoundSortKeys%",
+                    "default": null
+                },
+                "datapack.lint.nbtListLengthCheck": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "hint",
+                                        "information",
+                                        "warning",
+                                        "error"
+                                    ]
+                                },
+                                {
+                                    "enum": [
+                                        true
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "markdownDescription": "%datapack.config.lint.nbtListLengthCheck%",
                     "default": null
                 },
                 "datapack.lint.nbtPathQuote": {
@@ -2221,12 +2280,6 @@
                     "literal:mcfunction": [
                         "keyword.other.mcfunction"
                     ],
-                    "literal.firstArgument:json": [
-                        "keyword.control.json"
-                    ],
-                    "literal.firstArgument:mcfunction": [
-                        "keyword.control.mcfunction"
-                    ],
                     "identity:json": [
                         "entity.name.function.json"
                     ],
@@ -2238,6 +2291,12 @@
                     ],
                     "vector:mcfunction": [
                         "constant.numeric.vector.mcfunction"
+                    ],
+                    "*.firstArgument:json": [
+                        "keyword.control.json"
+                    ],
+                    "*.firstArgument:mcfunction": [
+                        "keyword.control.mcfunction"
                     ],
                     "*.inString:json": [
                         "markup.italic.in-string.json"
