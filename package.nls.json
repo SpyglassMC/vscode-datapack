@@ -1,4 +1,7 @@
 {
+    "datapack.commands.createFile.title": "Create File",
+    "datapack.commands.evaludateJavaScript.title": "Evaluate JavaScript Snippet",
+    "datapack.commands.redownloadData.title": "Re-download Completion Data",
     "datapack.commands.regenerateCache.title": "Regenerate Cache",
     "datapack.config.env.cmdVersion": "The version of the command tree. Only major versions are available.",
     "datapack.config.env.dataSource": "The download source of the completion data. We recommend you to choose GitHub, unless raw.githubusercontent.com is blocked in your country/region.",

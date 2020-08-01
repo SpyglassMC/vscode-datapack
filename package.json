@@ -84,8 +84,16 @@
         ],
         "keybindings": [
             {
-                "command": "datapack.regenerateCache",
-                "key": "Alt+Shift+D G"
+                "command": "datapack.createFile",
+                "key": "Alt+Shift+D Alt+Shift+C"
+            },
+            {
+                "command": "datapack.evaludateJavaScript",
+                "key": "Alt+Shift+D Alt+Shift+E"
+            },
+            {
+                "command": "datapack.redownloadData",
+                "key": "Alt+Shift+D Alt+Shift+D"
             },
             {
                 "command": "datapack.regenerateCache",
@@ -109,12 +117,45 @@
         ],
         "commands": [
             {
+                "command": "datapack.createFile",
+                "title": "%datapack.commands.createFile.title%",
+                "category": "Datapack",
+                "enablement": "workspaceFolderCount != 0"
+            },
+            {
+                "command": "datapack.evaludateJavaScript",
+                "title": "%datapack.commands.evaludateJavaScript.title%",
+                "category": "Datapack",
+                "enablement": "editorLangId == mcfunction && editorHasSelection"
+            },
+            {
+                "command": "datapack.redownloadData",
+                "title": "%datapack.commands.redownloadData.title%",
+                "category": "Datapack"
+            },
+            {
                 "command": "datapack.regenerateCache",
                 "title": "%datapack.commands.regenerateCache.title%",
                 "category": "Datapack",
-                "enablement": "workspaceFolderCount != 0 && editorLangId == mcfunction"
+                "enablement": "workspaceFolderCount != 0"
             }
         ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "datapack.createFile",
+                    "when": "workspaceFolderCount != 0"
+                },
+                {
+                    "command": "datapack.evaludateJavaScript",
+                    "when": "editorLangId == mcfunction"
+                },
+                {
+                    "command": "datapack.regenerateCache",
+                    "when": "workspaceFolderCount != 0"
+                }
+            ]
+        },
         "configuration": {
             "title": "Datapack Language Server",
             "properties": {
@@ -2280,6 +2321,12 @@
                     "literal:mcfunction": [
                         "keyword.other.mcfunction"
                     ],
+                    "literal.firstArgument:json": [
+                        "keyword.control.json"
+                    ],
+                    "literal.firstArgument:mcfunction": [
+                        "keyword.control.mcfunction"
+                    ],
                     "identity:json": [
                         "entity.name.function.json"
                     ],
@@ -2291,12 +2338,6 @@
                     ],
                     "vector:mcfunction": [
                         "constant.numeric.vector.mcfunction"
-                    ],
-                    "*.firstArgument:json": [
-                        "keyword.control.json"
-                    ],
-                    "*.firstArgument:mcfunction": [
-                        "keyword.control.mcfunction"
                     ],
                     "*.inString:json": [
                         "markup.italic.in-string.json"
