@@ -55,7 +55,7 @@ export function activate(context: ExtensionContext) {
         for (const root of workspace.workspaceFolders) {
             clientOptions.synchronize.fileEvents.push(
                 workspace.createFileSystemWatcher(
-                    new RelativePattern(root, 'data/**/*.{json,mcfunction}')
+                    new RelativePattern(root, '**/data/**/*.{json,mcfunction}')
                 ),
                 workspace.createFileSystemWatcher(
                     new RelativePattern(root, '**/{data,pack.mcmeta}'),
