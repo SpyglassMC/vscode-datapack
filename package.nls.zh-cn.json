@@ -1,4 +1,7 @@
 {
+    "datapack.commands.createFile.title": "创建文件",
+    "datapack.commands.evaludateJavaScript.title": "执行 JavaScript 代码片段",
+    "datapack.commands.redownloadData.title": "重新下载补全数据",
     "datapack.commands.regenerateCache.title": "重新生成缓存",
     "datapack.config.env.cmdVersion": "命令树的版本。只能选择正式版本号。",
     "datapack.config.env.dataSource": "补全数据的下载源。建议选择「码云」，否则可能导致下载不畅。",
@@ -34,6 +37,7 @@
     "datapack.config.lint.nameOfTeams": "队伍的命名规范。",
     "datapack.config.lint.nbtArrayBracketSpacing": "NBT 数组的方括号内部的空格",
     "datapack.config.lint.nbtArrayCommaSpacing": "NBT 数组的逗号周围的空格。不论设置为何，尾逗号后面的空格永远会被移除。",
+    "datapack.config.lint.nbtArrayLengthCheck": "验证 NBT 数组的长度。",
     "datapack.config.lint.nbtArraySemicolonSpacing": "NBT 数组中分号之后的空格。不论设置为何，在数组为空的情况下分号后面的空格永远会被移除。",
     "datapack.config.lint.nbtArrayTrailingComma": "NBT 数组的最后一个数字后是否应该有尾逗号。",
     "datapack.config.lint.nbtBoolean": "是否使用布尔值字面量（`true` 与 `false`）来表示类布尔的 NBT 字节型（byte）标签。",
@@ -50,6 +54,7 @@
     "datapack.config.lint.nbtFloatSuffix": "NBT 中 TAG_Float 的后缀。",
     "datapack.config.lint.nbtListBracketSpacing": "NBT 列表的方括号内部的空格。",
     "datapack.config.lint.nbtListCommaSpacing": "NBT 列表的逗号周围的空格。不论设置为何，尾逗号后面的空格永远会被移除。",
+    "datapack.config.lint.nbtListLengthCheck": "验证 NBT 列表的长度。",
     "datapack.config.lint.nbtListTrailingComma": "NBT 列表的最后一个标签后是否应该有尾逗号。",
     "datapack.config.lint.nbtLongSuffix": "NBT 中 TAG_Long 的后缀。",
     "datapack.config.lint.nbtPathQuote": "是否用引号包裹 NBT 路径中的键。",
