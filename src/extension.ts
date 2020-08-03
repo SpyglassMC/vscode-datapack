@@ -46,7 +46,8 @@ export function activate(context: ExtensionContext) {
         },
         initializationOptions: {
             storagePath: context.storagePath,
-            globalStoragePath: context.globalStoragePath
+            globalStoragePath: context.globalStoragePath,
+            localeCode: getVSCodeLanguage()
         },
         progressOnInitialization: true
     }
@@ -103,7 +104,10 @@ export function activate(context: ExtensionContext) {
                     ['annotation', 'boolean', 'comment', 'entity', 'keyword', 'literal', 'identity', 'number', 'operator', 'property', 'string', 'type', 'variable', 'vector'],
                     ['declaration', 'deprecated', 'documentation', 'firstArgument', 'inString']
                 )
-            )
+            )/* ,
+            commands.registerTextEditorCommand('datapack.evaludateJavaScript', (textEditor, edit) => {
+                textEditor.
+            }) */
         )
     })
 }
@@ -123,6 +127,25 @@ class LspSemanticTokensProvider implements DocumentSemanticTokensProvider {
             return { resultId: response.resultId, edits: (response as LspSemanticTokensEdits).edits.map(v => ({ start: v.start, deleteCount: v.deleteCount, data: v.data ? new Uint32Array(v.data) : undefined })) }
         }
     }
+}
+
+function getVSCodeLanguage() {
+    if (process.env.VSCODE_NLS_CONFIG) {
+        try {
+            const config = JSON.parse(process.env.VSCODE_NLS_CONFIG)
+            if (typeof config.locale === 'string') {
+                const code: string = config.locale
+                return code === 'en-us' ? 'en' : code
+            } else {
+                console.warn(`[I18N] Have issues parsing VSCODE_NLS_CONFIG: “${process.env.VSCODE_NLS_CONFIG}”`)
+            }
+        } catch (ignored) {
+            console.warn(`[I18N] Have issues parsing VSCODE_NLS_CONFIG: “${process.env.VSCODE_NLS_CONFIG}”`)
+        }
+    } else {
+        console.warn('[I18N] No VSCODE_NLS_CONFIG found.')
+    }
+    return 'en'
 }
 
 export function deactivate(): Thenable<void> | undefined {
