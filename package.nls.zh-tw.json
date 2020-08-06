@@ -101,7 +101,7 @@
     "datapack.config.lint.stringQuoteType": "字串引數的引號類型。",
     "datapack.config.lint.timeOmitTickUnit": "是否省略時間引數中刻的單位（`t`）。",
     "datapack.config.snippets": "程式碼片段。",
-    "datapack.description": "為 MCFunction 檔案提供重量級語言特性",
+    "datapack.description": "為 Minecraft Java版 資料包檔案提供重量級語言特性",
     "datapack.displayName": "Data-pack Helper Plus",
     "datapack.trace.server": "跟蹤 VS Code 和資料包語言伺服器之間的通訊。"
 }
