@@ -101,7 +101,7 @@
     "datapack.config.lint.stringQuoteType": "NBT文字列の引用符の種類を強制する。",
     "datapack.config.lint.timeOmitTickUnit": "時間を入力する引数でtickの単位(`t`)を省略する。",
     "datapack.config.snippets": "コードスニペット",
-    "datapack.description": "MCFunctionファイル用の言語機能",
+    "datapack.description": "Minecraft: Java Edition データパックファイル用の言語機能",
     "datapack.displayName": "Data-pack Helper Plus",
     "datapack.trace.server": "VS Code と DHP 言語サーバー間の通信をトレースします"
 }
