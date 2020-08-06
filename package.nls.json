@@ -101,7 +101,7 @@
     "datapack.config.lint.stringQuoteType": "Enforce the type of string argument quotation marks.",
     "datapack.config.lint.timeOmitTickUnit": "Whether or not to omit the tick units (`t`) of time arguments.",
     "datapack.config.snippets": "Code snippets.",
-    "datapack.description": "Heavy language features for MCFunction files",
+    "datapack.description": "Heavy language features for Minecraft: Java Edition data pack files",
     "datapack.displayName": "Data-pack Helper Plus",
     "datapack.trace.server": "Traces the communication between VS Code and the data-pack language server."
 }

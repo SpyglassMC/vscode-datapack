@@ -35,7 +35,7 @@ export function activate(context: ExtensionContext) {
     const documentSelector: DocumentSelector = [
         { language: 'mcfunction' },
         { scheme: 'file', pattern: '**/pack.mcmeta' },
-        { scheme: 'file', pattern: '**/data/*/{advancements,functions,loot_tables,predicates,recipes,structures,tags,dimension,dimension_type,worldgen}/**/*.json' }
+        { scheme: 'file', pattern: '**/data/*/*/**/*.json' }
     ]
 
     // Options to control the language client
@@ -47,7 +47,10 @@ export function activate(context: ExtensionContext) {
         initializationOptions: {
             storagePath: context.storagePath,
             globalStoragePath: context.globalStoragePath,
-            localeCode: getVSCodeLanguage()
+            localeCode: getVSCodeLanguage(),
+            customCapabilities: {
+                checkServerVersion: true
+            }
         },
         progressOnInitialization: true
     }
@@ -78,7 +81,7 @@ export function activate(context: ExtensionContext) {
     client.start()
 
     client.onReady().then(() => {
-        client.onNotification('datapackLanguageServer/checkVersion', ({ currentVersion, title, action, url }) => {
+        client.onNotification('spgoding/datapack/checkServerVersion', ({ currentVersion, title, action, url }) => {
             const lastVersion = context.globalState.get('lastVersion')
             if (lastVersion !== currentVersion) {
                 window
