@@ -113,6 +113,12 @@ export function activate(context: ExtensionContext) {
             }) */
         )
     })
+
+    // if (!context.globalState.get('firstUse')) {
+    //     context.globalState.update('firstUse', new Date().getTime())
+    // }
+    // context.globalState.update('lastUse', new Date().getTime())
+    // context.globalState.update('useAmount', (context.globalState.get('context.globalState') as number ?? 0) + 1)
 }
 
 class LspSemanticTokensProvider implements DocumentSemanticTokensProvider {
