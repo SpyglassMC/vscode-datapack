@@ -1,3 +1,11 @@
+# [v3.0.0](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v2.1.14...v3.0.0) (2020-08-14)
+
+## 🐛 Bug Fixes
+- [`ff97c91`](https://github.com/SPGoding/vscode-datapack-helper-plus/commit/ff97c91)  @spgoding/datapack-language-server@2.1.13 
+
+## 💥 Breaking Changes
+- [`b7dd0f1`](https://github.com/SPGoding/vscode-datapack-helper-plus/commit/b7dd0f1)  Install @spgoding/datapack-language-server@3.0.0
+
 # [v2.1.14](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v2.1.13...v2.1.14) (2020-07-14)
 
 ## 🐛 Bug Fixes
