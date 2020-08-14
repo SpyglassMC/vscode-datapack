@@ -170,6 +170,38 @@
                     "markdownDescription": "%datapack.config.env.permissionLevel%",
                     "default": 2
                 },
+                "datapack.env.defaultVisibility": {
+                    "markdownDescription": "%datapack.config.env.defaultVisibility%",
+                    "oneOf": [
+                        {
+                            "enum": [
+                                "private",
+                                "internal",
+                                "public"
+                            ]
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "enum": [
+                                        "advancement",
+                                        "function",
+                                        "tag/function"
+                                    ]
+                                },
+                                "pattern": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "type",
+                                "pattern"
+                            ]
+                        }
+                    ],
+                    "default": "public"
+                },
                 "datapack.env.dependsOnVanilla": {
                     "type": "boolean",
                     "markdownDescription": "%datapack.config.env.dependsOnVanilla%",

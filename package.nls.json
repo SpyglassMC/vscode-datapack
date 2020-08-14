@@ -6,6 +6,7 @@
     "datapack.config.env.cmdVersion": "The version of the command tree. Only major versions are available.",
     "datapack.config.env.dataSource": "The download source of the completion data. We recommend you to choose GitHub, unless raw.githubusercontent.com is blocked in your country/region.",
     "datapack.config.env.dataVersion": "The version of the completion data, including registries, block definitions, and nbtdoc. Should be an identity in the [version manifest](https://launchermeta.mojang.com/mc/game/version_manifest.json) which was released after `19w40a`. Apart from a version identity, you can also input `Latest release` or `Latest snapshot` here (case-insensitive).",
+    "datapack.config.env.defaultVisibility": "The default visibility for resources.",
     "datapack.config.env.dependsOnVanilla": "Whether this data pack depends on the vanilla data pack or not. If this option is enabled, completions for the corresponding data of the vanilla data pack will be provided.",
     "datapack.config.env.detectionDepth": "The file system depth for data pack root detection.",
     "datapack.config.env.exclude": "Files that should be excluded from validation. Each string in this array will be interpreted as a glob pattern to test the relative file paths from the root of the data pack.",
