@@ -10,7 +10,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
-Datapack Helper Plus，简称 DHP，中文名大憨批，是一组能够为 Minecraft Java版的数据包文件（包括进度、函数、战利品表、断言、配方、各种标签）提供支持的插件。您可以将其安装在 [VSCode](https://code.visualstudio.com/) 编辑器上。
+Data-pack Helper Plus，简称 DHP，中文名大憨批，是一组能够为 Minecraft Java版的数据包文件（包括进度、函数、战利品表、断言、配方、各种标签）提供支持的插件。您可以将其安装在 [VSCode](https://code.visualstudio.com/) 编辑器上。
 
 # 免责声明
 

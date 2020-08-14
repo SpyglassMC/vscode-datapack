@@ -5,7 +5,7 @@
 
 import { join } from 'path'
 import { commands, DocumentSemanticTokensProvider, ExtensionContext, FileSystemWatcher, languages, RelativePattern, SemanticTokens, SemanticTokensEdits, SemanticTokensLegend, TextDocument, Uri, window, workspace } from 'vscode'
-import { LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient'
+import { DocumentSelector, LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient'
 
 let client: LanguageClient
 
@@ -32,22 +32,25 @@ export function activate(context: ExtensionContext) {
         }
     }
 
+    const documentSelector: DocumentSelector = [
+        { language: 'mcfunction' },
+        { scheme: 'file', pattern: '**/pack.mcmeta' },
+        { scheme: 'file', pattern: '**/data/*/*/**/*.json' }
+    ]
+
     // Options to control the language client
     const clientOptions: LanguageClientOptions & { synchronize: { fileEvents: FileSystemWatcher[] } } = {
-        documentSelector: [
-            { language: 'mcfunction' }
-            // { language: 'json', pattern: 'data/*/advancements/**.json' },
-            // { language: 'json', pattern: 'data/*/loot_tables/**.json' },
-            // { language: 'json', pattern: 'data/*/predicates/**.json' },
-            // { language: 'json', pattern: 'data/*/recipes/**.json' },
-            // { language: 'json', pattern: 'data/*/tags/{block,entity_types,fluids,functions,items}/**.json' }
-        ],
+        documentSelector,
         synchronize: {
             fileEvents: []
         },
         initializationOptions: {
             storagePath: context.storagePath,
-            globalStoragePath: context.globalStoragePath
+            globalStoragePath: context.globalStoragePath,
+            localeCode: getVSCodeLanguage(),
+            customCapabilities: {
+                checkServerVersion: true
+            }
         },
         progressOnInitialization: true
     }
@@ -56,7 +59,11 @@ export function activate(context: ExtensionContext) {
         for (const root of workspace.workspaceFolders) {
             clientOptions.synchronize.fileEvents.push(
                 workspace.createFileSystemWatcher(
-                    new RelativePattern(root, 'data/**/*.{json,mcfunction}')
+                    new RelativePattern(root, '**/data/**/*.{json,mcfunction}')
+                ),
+                workspace.createFileSystemWatcher(
+                    new RelativePattern(root, '**/{data,pack.mcmeta}'),
+                    false, true, false
                 )
             )
         }
@@ -74,7 +81,7 @@ export function activate(context: ExtensionContext) {
     client.start()
 
     client.onReady().then(() => {
-        client.onNotification('datapackLanguageServer/checkVersion', ({ currentVersion, title, action, url }) => {
+        client.onNotification('spgoding/datapack/checkServerVersion', ({ currentVersion, title, action, url }) => {
             const lastVersion = context.globalState.get('lastVersion')
             if (lastVersion !== currentVersion) {
                 window
@@ -94,15 +101,24 @@ export function activate(context: ExtensionContext) {
         })
         context.subscriptions.push(
             languages.registerDocumentSemanticTokensProvider(
-                { language: 'mcfunction' },
+                documentSelector,
                 new LspSemanticTokensProvider(),
                 new SemanticTokensLegend(
                     ['annotation', 'boolean', 'comment', 'entity', 'keyword', 'literal', 'identity', 'number', 'operator', 'property', 'string', 'type', 'variable', 'vector'],
                     ['declaration', 'deprecated', 'documentation', 'firstArgument', 'inString']
                 )
-            )
+            )/* ,
+            commands.registerTextEditorCommand('datapack.evaludateJavaScript', (textEditor, edit) => {
+                textEditor.
+            }) */
         )
     })
+
+    // if (!context.globalState.get('firstUse')) {
+    //     context.globalState.update('firstUse', new Date().getTime())
+    // }
+    // context.globalState.update('lastUse', new Date().getTime())
+    // context.globalState.update('useAmount', (context.globalState.get('context.globalState') as number ?? 0) + 1)
 }
 
 class LspSemanticTokensProvider implements DocumentSemanticTokensProvider {
@@ -120,6 +136,25 @@ class LspSemanticTokensProvider implements DocumentSemanticTokensProvider {
             return { resultId: response.resultId, edits: (response as LspSemanticTokensEdits).edits.map(v => ({ start: v.start, deleteCount: v.deleteCount, data: v.data ? new Uint32Array(v.data) : undefined })) }
         }
     }
+}
+
+function getVSCodeLanguage() {
+    if (process.env.VSCODE_NLS_CONFIG) {
+        try {
+            const config = JSON.parse(process.env.VSCODE_NLS_CONFIG)
+            if (typeof config.locale === 'string') {
+                const code: string = config.locale
+                return code === 'en-us' ? 'en' : code
+            } else {
+                console.warn(`[I18N] Have issues parsing VSCODE_NLS_CONFIG: “${process.env.VSCODE_NLS_CONFIG}”`)
+            }
+        } catch (ignored) {
+            console.warn(`[I18N] Have issues parsing VSCODE_NLS_CONFIG: “${process.env.VSCODE_NLS_CONFIG}”`)
+        }
+    } else {
+        console.warn('[I18N] No VSCODE_NLS_CONFIG found.')
+    }
+    return 'en'
 }
 
 export function deactivate(): Thenable<void> | undefined {
