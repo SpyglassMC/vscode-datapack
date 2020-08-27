@@ -19,6 +19,7 @@
     "datapack.config.features.completions": "Si DHP devraient fournir des complétions ou non.",
     "datapack.config.features.documentHighlighting": "Si DHP devrait fournir une coloration syntaxique des documents ou non.",
     "datapack.config.features.documentLinks": "Si DHP devrait fournir des liens vers les documents ou non.",
+    "datapack.config.features.foldingRanges": "Si DHP devrait permettre de déplier/réduire le code ou non.",
     "datapack.config.features.formatting": "Si DHP devrait fournir des fonctionnalités de formatage ou non.",
     "datapack.config.features.hover": "Si DHP devrait fournir des informations lors du survol ou non.",
     "datapack.config.features.selectionRanges": "Si DHP devrait fournir des intervalles de sélection ou non.",
@@ -102,5 +103,6 @@
     "datapack.config.lint.timeOmitTickUnit": "Si l'unité de temps des ticks (`t`) est omise dans les arguments.",
     "datapack.config.snippets": "Extraits de code.",
     "datapack.description": "Fonctionnalités étendues pour les langages des data packs de Minecraft : Java Edition",
-    "datapack.displayName": "Data-pack Helper Plus"
+    "datapack.displayName": "Data-pack Helper Plus",
+    "datapack.trace.server": "Trace la communication entre VS Code et le serveur de langage data-pack."
 }
