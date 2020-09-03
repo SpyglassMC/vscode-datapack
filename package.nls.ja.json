@@ -95,6 +95,7 @@
     "datapack.config.lint.strictPredicateCheck": "ワークスペースに存在しないpredicateに対して警告する。",
     "datapack.config.lint.strictRecipeCheck": "ワークスペースに存在しないrecipeに対して警告する。",
     "datapack.config.lint.strictSoundEventCheck": "不明なsound eventに対して警告する。",
+    "datapack.config.lint.strictScoreHolderCheck": "未定義のscore_holderに対して警告する。",
     "datapack.config.lint.strictStorageCheck": "未定義のstorageに対して警告する。",
     "datapack.config.lint.strictTagCheck": "未定義のtagに対して警告する。",
     "datapack.config.lint.strictTeamCheck": "未定義のteamに対して警告する。",

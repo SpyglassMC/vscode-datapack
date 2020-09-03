@@ -95,6 +95,7 @@
     "datapack.config.lint.strictPredicateCheck": "Show diagnostics for predicates that don't exist in the current workspace.",
     "datapack.config.lint.strictRecipeCheck": "Show diagnostics for recipes that don't exist in the current workspace.",
     "datapack.config.lint.strictSoundEventCheck": "Show diagnostics for sound events that don't exist in the registry.",
+    "datapack.config.lint.strictScoreHolderCheck": "Show diagnostics for score_holders that haven't been defined in the workspace.",
     "datapack.config.lint.strictStorageCheck": "Show diagnostics for storages that haven't been defined in the workspace.",
     "datapack.config.lint.strictTagCheck": "Show diagnostics for tags that haven't been defined in the workspace.",
     "datapack.config.lint.strictTeamCheck": "Show diagnostics for teams that haven't been defined in the workspace.",

@@ -1815,6 +1815,35 @@
                     "markdownDescription": "%datapack.config.lint.strictRecipeCheck%",
                     "default": null
                 },
+                "datapack.lint.strictScoreHolderCheck": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "hint",
+                                        "information",
+                                        "warning",
+                                        "error"
+                                    ]
+                                },
+                                {
+                                    "type": "boolean",
+                                    "enum": [
+                                        true
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "markdownDescription": "%datapack.config.lint.strictScoreHolderCheck%",
+                    "default": null
+                },
                 "datapack.lint.strictStorageCheck": {
                     "oneOf": [
                         {
