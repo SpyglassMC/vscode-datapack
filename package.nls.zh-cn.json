@@ -90,7 +90,7 @@
     "datapack.config.lint.strictMobEffectCheck": "是否为未知的状态效果显示警告。",
     "datapack.config.lint.strictMotiveCheck": "是否为未知的画的类型显示警告。",
     "datapack.config.lint.strictObjectiveCheck": "是否为未定义的记分项显示警告。",
-    "datapack.config.lint.strictParticleTypeCheck": "是否为未知的颗粒类型显示警告。",
+    "datapack.config.lint.strictParticleTypeCheck": "是否为未知的粒子类型显示警告。",
     "datapack.config.lint.strictPotionCheck": "是否为未知的药水显示警告。",
     "datapack.config.lint.strictPredicateCheck": "是否为当前工作区内不存在的 predicate 文件显示警告。",
     "datapack.config.lint.strictRecipeCheck": "是否为当前工作区内不存在的配方显示警告。",
