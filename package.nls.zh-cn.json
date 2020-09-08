@@ -95,7 +95,7 @@
     "datapack.config.lint.strictPredicateCheck": "是否为当前工作区内不存在的 predicate 文件显示警告。",
     "datapack.config.lint.strictRecipeCheck": "是否为当前工作区内不存在的配方显示警告。",
     "datapack.config.lint.strictSoundEventCheck": "是否为未定义的声音事件显示警告。",
-    "datapack.config.lint.strictStorageCheck": "是否为未定义的数据储存显示警告。",
+    "datapack.config.lint.strictStorageCheck": "是否为未定义的命令存储显示警告。",
     "datapack.config.lint.strictTagCheck": "是否为未定义的标签显示警告。",
     "datapack.config.lint.strictTeamCheck": "是否为未定义的队伍显示警告。",
     "datapack.config.lint.stringQuote": "是否用引号包裹字符串参数。",
