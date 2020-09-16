@@ -10,7 +10,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
-#### English / [日本語](https://github.com/ChenCMD/datapack-helper-plus-JP/blob/master/README.md)
+#### English / [简体中文](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/README-zh_Hans.md) / [日本語](https://github.com/ChenCMD/datapack-helper-plus-JP/blob/master/README.md)
 
 Data-pack Helper Plus can provide many heavy language features for documents in your datapack, including advancements, dimensions, dimension types, functions, loot tables, predicates, recipes, all kinds of tags, and worldgen settings.
 
