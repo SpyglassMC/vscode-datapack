@@ -10,6 +10,8 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
+#### English / [日本語](https://github.com/ChenCMD/datapack-helper-plus-JP/blob/master/README.md) / [简体中文](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/README-zh_Hans.md)
+
 Data-pack Helper Plus can provide many heavy language features for documents in your datapack, including advancements, dimensions, dimension types, functions, loot tables, predicates, recipes, all kinds of tags, and worldgen settings.
 
 If you like this extension, please consider [sponsoring](https://github.com/sponsors/SPGoding) me. You can also report bugs, suggest features, and help translations! See [CONTRIBUTING.md](https://github.com/SPGoding/datapack-language-server/blob/master/CONTRIBUTING.md) for more information.
@@ -109,7 +111,7 @@ If you'd like to help us translate this project into other languages, it would b
 
 > Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Semantic-Coloring
 
-All command arguments can be colored semantically. We also encourage you to install 
+All command arguments can be colored semantically. We also encourage you to install
 [Arcensoth](https://github.com/Arcensotj)'s [language-mcfunction extension](https://github.com/Arcensoth/language-mcfunction)
 to get instant coloring feedback.
 
@@ -126,8 +128,8 @@ Alternatively you can use Ctrl + Shift + Space (or other configured hotkey) to s
 
 ## Completions
 
-The extension can compute completions as you typing commands. Completions will automatically show if 
-you commit one of these characters: `[' ', ',', '{', '[', '=', ':', '/', '!', "'", '"', '.', '@']`. 
+The extension can compute completions as you typing commands. Completions will automatically show if
+you commit one of these characters: `[' ', ',', '{', '[', '=', ':', '/', '!', "'", '"', '.', '@']`.
 
 Alternatively you can use Ctrl + Space (or other configured hotkey) to show completions manually.
 
@@ -191,7 +193,7 @@ Also there are several linting rules you can set in the configuration settings. 
 
 ## Folding Ranges
 
-You can use comments (`#region` and `#endregion`) to create folding ranges, which makes the structure of mcfunction file much clearer. 
+You can use comments (`#region` and `#endregion`) to create folding ranges, which makes the structure of mcfunction file much clearer.
 
 ```mcfunction
 #region This is a block of commands
@@ -203,7 +205,7 @@ execute if score @s test matches 5 run say 5
 #endregion
 ```
 
-Alternatively, you can use different amount of hash symbols followed by at least one white space to create different levels of folding ranges: 
+Alternatively, you can use different amount of hash symbols followed by at least one white space to create different levels of folding ranges:
 
 ```mcfunction
 #region This is a block of commands

@@ -10,6 +10,8 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/)
 
+#### [English\(original\)](https://github.com/SPGoding/vscode-datapack-helper-plus/blob/master/README.md) / [日本語](https://github.com/ChenCMD/datapack-helper-plus-JP/blob/master/README.md) / 简体中文
+
 Data-pack Helper Plus，简称 DHP，中文名大憨批，是一组能够为 Minecraft Java版的数据包文件（包括进度、函数、战利品表、断言、配方、各种标签）提供支持的插件。您可以将其安装在 [VSCode](https://code.visualstudio.com/) 编辑器上。
 
 # 免责声明
@@ -81,7 +83,7 @@ function spgoding:foo
 
 > Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Semantic-Coloring
 
-所有命令参数都可以被语义化高亮。我们同时建议您安装 
+所有命令参数都可以被语义化高亮。我们同时建议您安装
 [Arcensoth](https://github.com/Arcensotj) 的 [language-mcfunction extension](https://github.com/Arcensoth/language-mcfunction)
 插件以获得实时的颜色反馈。
 
