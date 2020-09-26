@@ -1,3 +1,9 @@
+# [v3.0.5](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v3.0.4...v3.0.5) (2020-09-26)
+
+## 🐛 Bug Fixes
+- [`23c3c02`](https://github.com/SPGoding/vscode-datapack-helper-plus/commit/23c3c02)  Add missing strictScoreHolderCheck (#28) (Issues: [`#28`](https://github.com/SPGoding/vscode-datapack-helper-plus/issues/28))
+- [`dae233f`](https://github.com/SPGoding/vscode-datapack-helper-plus/commit/dae233f)  @spgoding/datapack-language-server@3.0.3
+
 # [v3.0.3](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v3.0.2...v3.0.3) (2020-09-26)
 
 ## 🐛 Bug Fixes
