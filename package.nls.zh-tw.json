@@ -94,6 +94,7 @@
     "datapack.config.lint.strictPotionCheck": "是否為未知的藥水顯示警告。",
     "datapack.config.lint.strictPredicateCheck": "是否為當前工作區內不存在的述詞顯示警告。",
     "datapack.config.lint.strictRecipeCheck": "是否為當前工作區內不存在的配方顯示警告。",
+    "datapack.config.lint.strictScoreHolderCheck": "是否為當前工作區內未定義的score_holders顯示警告。",
     "datapack.config.lint.strictSoundEventCheck": "是否為未定義的聲音事件顯示警告。",
     "datapack.config.lint.strictStorageCheck": "是否為未定義的容器顯示警告。",
     "datapack.config.lint.strictTagCheck": "是否為未定義的標籤顯示警告。",
