@@ -94,6 +94,7 @@
     "datapack.config.lint.strictPotionCheck": "是否为未知的药水显示警告。",
     "datapack.config.lint.strictPredicateCheck": "是否为当前工作区内不存在的 predicate 文件显示警告。",
     "datapack.config.lint.strictRecipeCheck": "是否为当前工作区内不存在的配方显示警告。",
+    "datapack.config.lint.strictScoreHolderCheck": "是否为当前工作区内未定义的score_holders显示警告。",
     "datapack.config.lint.strictSoundEventCheck": "是否为未定义的声音事件显示警告。",
     "datapack.config.lint.strictStorageCheck": "是否为未定义的命令存储显示警告。",
     "datapack.config.lint.strictTagCheck": "是否为未定义的标签显示警告。",
