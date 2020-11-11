@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "^3.0.8",
+        "@spgoding/datapack-language-server": "^3.0.9",
         "vscode-languageclient": "^6.1.3"
     },
     "devDependencies": {
@@ -73,6 +73,7 @@
                 "fileMatch": [
                     "pack.mcmeta",
                     "data/*/advancements/*.json",
+                    "data/*/item_modifiers/*.json",
                     "data/*/loot_tables/*.json",
                     "data/*/predicates/*.json",
                     "data/*/recipes/*.json",
