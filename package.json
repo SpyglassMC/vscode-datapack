@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "^3.1.0",
+        "@spgoding/datapack-language-server": "^3.1.1",
         "vscode-languageclient": "^6.1.3"
     },
     "devDependencies": {
@@ -239,7 +239,7 @@
                         "1.17"
                     ],
                     "markdownDescription": "%datapack.config.env.cmdVersion%",
-                    "default": "1.17"
+                    "default": "1.16"
                 },
                 "datapack.env.dataSource": {
                     "type": "string",
@@ -264,7 +264,7 @@
                         }
                     ],
                     "markdownDescription": "%datapack.config.env.dataVersion%",
-                    "default": "Latest snapshot"
+                    "default": "Latest release"
                 },
                 "datapack.env.include": {
                     "type": "array",
@@ -281,7 +281,7 @@
                         "1.17"
                     ],
                     "markdownDescription": "%datapack.config.env.jsonVersion%",
-                    "default": "1.17"
+                    "default": "1.16"
                 },
                 "datapack.env.exclude": {
                     "type": "array",
