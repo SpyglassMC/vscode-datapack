@@ -1,3 +1,9 @@
+# [v3.2.0](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v3.1.2...v3.2.0) (2020-11-29)
+
+## ✨ New Features
+- [`5053396`](https://github.com/SPGoding/vscode-datapack-helper-plus/commit/5053396)  Allow complex regexp with Naming Convention (#38) (Issues: [`#38`](https://github.com/SPGoding/vscode-datapack-helper-plus/issues/38))
+- [`34c4034`](https://github.com/SPGoding/vscode-datapack-helper-plus/commit/34c4034)  @spgoding/datapack-language-server@3.2.0
+
 # [v3.1.2](https://github.com/SPGoding/vscode-datapack-helper-plus/compare/v3.1.1...v3.1.2) (2020-11-22)
 
 ## 🐛 Bug Fixes

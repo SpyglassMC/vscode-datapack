@@ -1,6 +1,6 @@
 {
     "name": "datapack-language-server",
-    "version": "3.1.2",
+    "version": "3.2.0",
     "main": "dist/extension.js",
     "author": "SPGoding",
     "publisher": "SPGoding",
