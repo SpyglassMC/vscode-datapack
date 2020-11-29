@@ -852,19 +852,205 @@
                                                 "PascalCase",
                                                 "snake_case",
                                                 "SCREAMING_SNAKE_CASE",
-                                                "kebab-case"
+                                                "kebab-case",
+                                                "lowercase",
+                                                "UPPERCASE"
                                             ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "^/.*/$"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "required": [
+                                                "label",
+                                                "sep",
+                                                "parts"
+                                            ],
+                                            "properties": {
+                                                "label": {
+                                                    "type": "string"
+                                                },
+                                                "prefix": {
+                                                    "type": "string"
+                                                },
+                                                "suffix": {
+                                                    "type": "string"
+                                                },
+                                                "sep": {
+                                                    "type": "string"
+                                                },
+                                                "allowLessParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "allowMoreParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "parts": {
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "camelCase",
+                                                                "PascalCase",
+                                                                "snake_case",
+                                                                "SCREAMING_SNAKE_CASE",
+                                                                "kebab-case",
+                                                                "lowercase",
+                                                                "UPPERCASE"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "string",
+                                                            "pattern": "^/.*/$"
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "required": [
+                                                                "sep",
+                                                                "parts"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
                                         },
                                         {
                                             "type": "array",
                                             "items": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "camelCase",
-                                                    "PascalCase",
-                                                    "snake_case",
-                                                    "SCREAMING_SNAKE_CASE",
-                                                    "kebab-case"
+                                                "oneOf": [
+                                                    {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "camelCase",
+                                                            "PascalCase",
+                                                            "snake_case",
+                                                            "SCREAMING_SNAKE_CASE",
+                                                            "kebab-case",
+                                                            "lowercase",
+                                                            "UPPERCASE"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "string",
+                                                        "pattern": "^/.*/$"
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "required": [
+                                                            "label",
+                                                            "sep",
+                                                            "parts"
+                                                        ],
+                                                        "properties": {
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "prefix": {
+                                                                "type": "string"
+                                                            },
+                                                            "suffix": {
+                                                                "type": "string"
+                                                            },
+                                                            "sep": {
+                                                                "type": "string"
+                                                            },
+                                                            "allowLessParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "allowMoreParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "parts": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "oneOf": [
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "camelCase",
+                                                                                        "PascalCase",
+                                                                                        "snake_case",
+                                                                                        "SCREAMING_SNAKE_CASE",
+                                                                                        "kebab-case",
+                                                                                        "lowercase",
+                                                                                        "UPPERCASE"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "pattern": "^/.*/$"
+                                                                                },
+                                                                                {
+                                                                                    "type": "object",
+                                                                                    "required": [
+                                                                                        "sep",
+                                                                                        "parts"
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
                                                 ]
                                             }
                                         }
@@ -902,19 +1088,83 @@
                                                 "PascalCase",
                                                 "snake_case",
                                                 "SCREAMING_SNAKE_CASE",
-                                                "kebab-case"
+                                                "kebab-case",
+                                                "lowercase",
+                                                "UPPERCASE"
                                             ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "^/.*/$"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "label": {
+                                                    "type": "string"
+                                                },
+                                                "prefix": {
+                                                    "type": "string"
+                                                },
+                                                "suffix": {
+                                                    "type": "string"
+                                                },
+                                                "sep": {
+                                                    "type": "string"
+                                                },
+                                                "allowLessParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "allowMoreParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "parts": {}
+                                            }
                                         },
                                         {
                                             "type": "array",
                                             "items": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "camelCase",
-                                                    "PascalCase",
-                                                    "snake_case",
-                                                    "SCREAMING_SNAKE_CASE",
-                                                    "kebab-case"
+                                                "oneOf": [
+                                                    {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "camelCase",
+                                                            "PascalCase",
+                                                            "snake_case",
+                                                            "SCREAMING_SNAKE_CASE",
+                                                            "kebab-case",
+                                                            "lowercase",
+                                                            "UPPERCASE"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "string",
+                                                        "pattern": "^/.*/$"
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "prefix": {
+                                                                "type": "string"
+                                                            },
+                                                            "suffix": {
+                                                                "type": "string"
+                                                            },
+                                                            "sep": {
+                                                                "type": "string"
+                                                            },
+                                                            "allowLessParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "allowMoreParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "parts": {}
+                                                        }
+                                                    }
                                                 ]
                                             }
                                         }
@@ -952,19 +1202,205 @@
                                                 "PascalCase",
                                                 "snake_case",
                                                 "SCREAMING_SNAKE_CASE",
-                                                "kebab-case"
+                                                "kebab-case",
+                                                "lowercase",
+                                                "UPPERCASE"
                                             ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "^/.*/$"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "required": [
+                                                "label",
+                                                "sep",
+                                                "parts"
+                                            ],
+                                            "properties": {
+                                                "label": {
+                                                    "type": "string"
+                                                },
+                                                "prefix": {
+                                                    "type": "string"
+                                                },
+                                                "suffix": {
+                                                    "type": "string"
+                                                },
+                                                "sep": {
+                                                    "type": "string"
+                                                },
+                                                "allowLessParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "allowMoreParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "parts": {
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "camelCase",
+                                                                "PascalCase",
+                                                                "snake_case",
+                                                                "SCREAMING_SNAKE_CASE",
+                                                                "kebab-case",
+                                                                "lowercase",
+                                                                "UPPERCASE"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "string",
+                                                            "pattern": "^/.*/$"
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "required": [
+                                                                "sep",
+                                                                "parts"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
                                         },
                                         {
                                             "type": "array",
                                             "items": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "camelCase",
-                                                    "PascalCase",
-                                                    "snake_case",
-                                                    "SCREAMING_SNAKE_CASE",
-                                                    "kebab-case"
+                                                "oneOf": [
+                                                    {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "camelCase",
+                                                            "PascalCase",
+                                                            "snake_case",
+                                                            "SCREAMING_SNAKE_CASE",
+                                                            "kebab-case",
+                                                            "lowercase",
+                                                            "UPPERCASE"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "string",
+                                                        "pattern": "^/.*/$"
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "required": [
+                                                            "label",
+                                                            "sep",
+                                                            "parts"
+                                                        ],
+                                                        "properties": {
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "prefix": {
+                                                                "type": "string"
+                                                            },
+                                                            "suffix": {
+                                                                "type": "string"
+                                                            },
+                                                            "sep": {
+                                                                "type": "string"
+                                                            },
+                                                            "allowLessParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "allowMoreParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "parts": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "oneOf": [
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "camelCase",
+                                                                                        "PascalCase",
+                                                                                        "snake_case",
+                                                                                        "SCREAMING_SNAKE_CASE",
+                                                                                        "kebab-case",
+                                                                                        "lowercase",
+                                                                                        "UPPERCASE"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "pattern": "^/.*/$"
+                                                                                },
+                                                                                {
+                                                                                    "type": "object",
+                                                                                    "required": [
+                                                                                        "sep",
+                                                                                        "parts"
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
                                                 ]
                                             }
                                         }
@@ -1002,19 +1438,205 @@
                                                 "PascalCase",
                                                 "snake_case",
                                                 "SCREAMING_SNAKE_CASE",
-                                                "kebab-case"
+                                                "kebab-case",
+                                                "lowercase",
+                                                "UPPERCASE"
                                             ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "^/.*/$"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "required": [
+                                                "label",
+                                                "sep",
+                                                "parts"
+                                            ],
+                                            "properties": {
+                                                "label": {
+                                                    "type": "string"
+                                                },
+                                                "prefix": {
+                                                    "type": "string"
+                                                },
+                                                "suffix": {
+                                                    "type": "string"
+                                                },
+                                                "sep": {
+                                                    "type": "string"
+                                                },
+                                                "allowLessParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "allowMoreParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "parts": {
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "camelCase",
+                                                                "PascalCase",
+                                                                "snake_case",
+                                                                "SCREAMING_SNAKE_CASE",
+                                                                "kebab-case",
+                                                                "lowercase",
+                                                                "UPPERCASE"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "string",
+                                                            "pattern": "^/.*/$"
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "required": [
+                                                                "sep",
+                                                                "parts"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
                                         },
                                         {
                                             "type": "array",
                                             "items": {
-                                                "type": "string",
-                                                "enum": [
-                                                    "camelCase",
-                                                    "PascalCase",
-                                                    "snake_case",
-                                                    "SCREAMING_SNAKE_CASE",
-                                                    "kebab-case"
+                                                "oneOf": [
+                                                    {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "camelCase",
+                                                            "PascalCase",
+                                                            "snake_case",
+                                                            "SCREAMING_SNAKE_CASE",
+                                                            "kebab-case",
+                                                            "lowercase",
+                                                            "UPPERCASE"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "string",
+                                                        "pattern": "^/.*/$"
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "required": [
+                                                            "label",
+                                                            "sep",
+                                                            "parts"
+                                                        ],
+                                                        "properties": {
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "prefix": {
+                                                                "type": "string"
+                                                            },
+                                                            "suffix": {
+                                                                "type": "string"
+                                                            },
+                                                            "sep": {
+                                                                "type": "string"
+                                                            },
+                                                            "allowLessParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "allowMoreParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "parts": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "oneOf": [
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "camelCase",
+                                                                                        "PascalCase",
+                                                                                        "snake_case",
+                                                                                        "SCREAMING_SNAKE_CASE",
+                                                                                        "kebab-case",
+                                                                                        "lowercase",
+                                                                                        "UPPERCASE"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "pattern": "^/.*/$"
+                                                                                },
+                                                                                {
+                                                                                    "type": "object",
+                                                                                    "required": [
+                                                                                        "sep",
+                                                                                        "parts"
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
                                                 ]
                                             }
                                         }
@@ -1024,6 +1646,242 @@
                         }
                     ],
                     "markdownDescription": "%datapack.config.lint.nameOfTeams%",
+                    "default": null
+                },
+                "datapack.lint.nameOScoreHolders": {
+                    "oneOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string",
+                                    "enum": [
+                                        "hint",
+                                        "information",
+                                        "warning",
+                                        "error"
+                                    ]
+                                },
+                                {
+                                    "oneOf": [
+                                        {
+                                            "type": "string",
+                                            "enum": [
+                                                "camelCase",
+                                                "PascalCase",
+                                                "snake_case",
+                                                "SCREAMING_SNAKE_CASE",
+                                                "kebab-case",
+                                                "lowercase",
+                                                "UPPERCASE"
+                                            ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "^/.*/$"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "required": [
+                                                "label",
+                                                "sep",
+                                                "parts"
+                                            ],
+                                            "properties": {
+                                                "label": {
+                                                    "type": "string"
+                                                },
+                                                "prefix": {
+                                                    "type": "string"
+                                                },
+                                                "suffix": {
+                                                    "type": "string"
+                                                },
+                                                "sep": {
+                                                    "type": "string"
+                                                },
+                                                "allowLessParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "allowMoreParts": {
+                                                    "type": "boolean"
+                                                },
+                                                "parts": {
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "camelCase",
+                                                                "PascalCase",
+                                                                "snake_case",
+                                                                "SCREAMING_SNAKE_CASE",
+                                                                "kebab-case",
+                                                                "lowercase",
+                                                                "UPPERCASE"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "string",
+                                                            "pattern": "^/.*/$"
+                                                        },
+                                                        {
+                                                            "type": "object",
+                                                            "required": [
+                                                                "sep",
+                                                                "parts"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "array",
+                                            "items": {
+                                                "oneOf": [
+                                                    {
+                                                        "type": "string",
+                                                        "enum": [
+                                                            "camelCase",
+                                                            "PascalCase",
+                                                            "snake_case",
+                                                            "SCREAMING_SNAKE_CASE",
+                                                            "kebab-case",
+                                                            "lowercase",
+                                                            "UPPERCASE"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "string",
+                                                        "pattern": "^/.*/$"
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "required": [
+                                                            "label",
+                                                            "sep",
+                                                            "parts"
+                                                        ],
+                                                        "properties": {
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "prefix": {
+                                                                "type": "string"
+                                                            },
+                                                            "suffix": {
+                                                                "type": "string"
+                                                            },
+                                                            "sep": {
+                                                                "type": "string"
+                                                            },
+                                                            "allowLessParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "allowMoreParts": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "parts": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object",
+                                                                        "required": [
+                                                                            "sep",
+                                                                            "parts"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "oneOf": [
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "camelCase",
+                                                                                        "PascalCase",
+                                                                                        "snake_case",
+                                                                                        "SCREAMING_SNAKE_CASE",
+                                                                                        "kebab-case",
+                                                                                        "lowercase",
+                                                                                        "UPPERCASE"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "pattern": "^/.*/$"
+                                                                                },
+                                                                                {
+                                                                                    "type": "object",
+                                                                                    "required": [
+                                                                                        "sep",
+                                                                                        "parts"
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "markdownDescription": "%datapack.config.lint.nameOfScoreHolders%",
                     "default": null
                 },
                 "datapack.lint.nbtArrayLengthCheck": {
