@@ -1648,7 +1648,7 @@
                     "markdownDescription": "%datapack.config.lint.nameOfTeams%",
                     "default": null
                 },
-                "datapack.lint.nameOScoreHolders": {
+                "datapack.lint.nameOfScoreHolders": {
                     "oneOf": [
                         {
                             "type": "null"
