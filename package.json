@@ -864,9 +864,7 @@
                                         {
                                             "type": "object",
                                             "required": [
-                                                "label",
-                                                "sep",
-                                                "parts"
+                                                "label"
                                             ],
                                             "properties": {
                                                 "label": {
@@ -906,11 +904,7 @@
                                                             "pattern": "^/.*/$"
                                                         },
                                                         {
-                                                            "type": "object",
-                                                            "required": [
-                                                                "sep",
-                                                                "parts"
-                                                            ]
+                                                            "type": "object"
                                                         },
                                                         {
                                                             "type": "array",
@@ -933,11 +927,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     }
                                                                 ]
                                                             }
@@ -969,9 +959,7 @@
                                                     {
                                                         "type": "object",
                                                         "required": [
-                                                            "label",
-                                                            "sep",
-                                                            "parts"
+                                                            "label"
                                                         ],
                                                         "properties": {
                                                             "label": {
@@ -1011,11 +999,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     },
                                                                     {
                                                                         "type": "array",
@@ -1038,11 +1022,7 @@
                                                                                     "pattern": "^/.*/$"
                                                                                 },
                                                                                 {
-                                                                                    "type": "object",
-                                                                                    "required": [
-                                                                                        "sep",
-                                                                                        "parts"
-                                                                                    ]
+                                                                                    "type": "object"
                                                                                 }
                                                                             ]
                                                                         }
@@ -1099,6 +1079,9 @@
                                         },
                                         {
                                             "type": "object",
+                                            "required": [
+                                                "label"
+                                            ],
                                             "properties": {
                                                 "label": {
                                                     "type": "string"
@@ -1118,7 +1101,55 @@
                                                 "allowMoreParts": {
                                                     "type": "boolean"
                                                 },
-                                                "parts": {}
+                                                "parts": {
+                                                    "oneOf": [
+                                                        {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                "camelCase",
+                                                                "PascalCase",
+                                                                "snake_case",
+                                                                "SCREAMING_SNAKE_CASE",
+                                                                "kebab-case",
+                                                                "lowercase",
+                                                                "UPPERCASE"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "string",
+                                                            "pattern": "^/.*/$"
+                                                        },
+                                                        {
+                                                            "type": "object"
+                                                        },
+                                                        {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
                                             }
                                         },
                                         {
@@ -1143,6 +1174,9 @@
                                                     },
                                                     {
                                                         "type": "object",
+                                                        "required": [
+                                                            "label"
+                                                        ],
                                                         "properties": {
                                                             "label": {
                                                                 "type": "string"
@@ -1162,7 +1196,55 @@
                                                             "allowMoreParts": {
                                                                 "type": "boolean"
                                                             },
-                                                            "parts": {}
+                                                            "parts": {
+                                                                "oneOf": [
+                                                                    {
+                                                                        "type": "string",
+                                                                        "enum": [
+                                                                            "camelCase",
+                                                                            "PascalCase",
+                                                                            "snake_case",
+                                                                            "SCREAMING_SNAKE_CASE",
+                                                                            "kebab-case",
+                                                                            "lowercase",
+                                                                            "UPPERCASE"
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "type": "string",
+                                                                        "pattern": "^/.*/$"
+                                                                    },
+                                                                    {
+                                                                        "type": "object"
+                                                                    },
+                                                                    {
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "oneOf": [
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "enum": [
+                                                                                        "camelCase",
+                                                                                        "PascalCase",
+                                                                                        "snake_case",
+                                                                                        "SCREAMING_SNAKE_CASE",
+                                                                                        "kebab-case",
+                                                                                        "lowercase",
+                                                                                        "UPPERCASE"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "type": "string",
+                                                                                    "pattern": "^/.*/$"
+                                                                                },
+                                                                                {
+                                                                                    "type": "object"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
                                                         }
                                                     }
                                                 ]
@@ -1214,9 +1296,7 @@
                                         {
                                             "type": "object",
                                             "required": [
-                                                "label",
-                                                "sep",
-                                                "parts"
+                                                "label"
                                             ],
                                             "properties": {
                                                 "label": {
@@ -1256,11 +1336,7 @@
                                                             "pattern": "^/.*/$"
                                                         },
                                                         {
-                                                            "type": "object",
-                                                            "required": [
-                                                                "sep",
-                                                                "parts"
-                                                            ]
+                                                            "type": "object"
                                                         },
                                                         {
                                                             "type": "array",
@@ -1283,11 +1359,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     }
                                                                 ]
                                                             }
@@ -1319,9 +1391,7 @@
                                                     {
                                                         "type": "object",
                                                         "required": [
-                                                            "label",
-                                                            "sep",
-                                                            "parts"
+                                                            "label"
                                                         ],
                                                         "properties": {
                                                             "label": {
@@ -1361,11 +1431,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     },
                                                                     {
                                                                         "type": "array",
@@ -1388,11 +1454,7 @@
                                                                                     "pattern": "^/.*/$"
                                                                                 },
                                                                                 {
-                                                                                    "type": "object",
-                                                                                    "required": [
-                                                                                        "sep",
-                                                                                        "parts"
-                                                                                    ]
+                                                                                    "type": "object"
                                                                                 }
                                                                             ]
                                                                         }
@@ -1450,9 +1512,7 @@
                                         {
                                             "type": "object",
                                             "required": [
-                                                "label",
-                                                "sep",
-                                                "parts"
+                                                "label"
                                             ],
                                             "properties": {
                                                 "label": {
@@ -1492,11 +1552,7 @@
                                                             "pattern": "^/.*/$"
                                                         },
                                                         {
-                                                            "type": "object",
-                                                            "required": [
-                                                                "sep",
-                                                                "parts"
-                                                            ]
+                                                            "type": "object"
                                                         },
                                                         {
                                                             "type": "array",
@@ -1519,11 +1575,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     }
                                                                 ]
                                                             }
@@ -1555,9 +1607,7 @@
                                                     {
                                                         "type": "object",
                                                         "required": [
-                                                            "label",
-                                                            "sep",
-                                                            "parts"
+                                                            "label"
                                                         ],
                                                         "properties": {
                                                             "label": {
@@ -1597,11 +1647,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     },
                                                                     {
                                                                         "type": "array",
@@ -1624,11 +1670,7 @@
                                                                                     "pattern": "^/.*/$"
                                                                                 },
                                                                                 {
-                                                                                    "type": "object",
-                                                                                    "required": [
-                                                                                        "sep",
-                                                                                        "parts"
-                                                                                    ]
+                                                                                    "type": "object"
                                                                                 }
                                                                             ]
                                                                         }
@@ -1686,9 +1728,7 @@
                                         {
                                             "type": "object",
                                             "required": [
-                                                "label",
-                                                "sep",
-                                                "parts"
+                                                "label"
                                             ],
                                             "properties": {
                                                 "label": {
@@ -1728,11 +1768,7 @@
                                                             "pattern": "^/.*/$"
                                                         },
                                                         {
-                                                            "type": "object",
-                                                            "required": [
-                                                                "sep",
-                                                                "parts"
-                                                            ]
+                                                            "type": "object"
                                                         },
                                                         {
                                                             "type": "array",
@@ -1755,11 +1791,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     }
                                                                 ]
                                                             }
@@ -1791,9 +1823,7 @@
                                                     {
                                                         "type": "object",
                                                         "required": [
-                                                            "label",
-                                                            "sep",
-                                                            "parts"
+                                                            "label"
                                                         ],
                                                         "properties": {
                                                             "label": {
@@ -1833,11 +1863,7 @@
                                                                         "pattern": "^/.*/$"
                                                                     },
                                                                     {
-                                                                        "type": "object",
-                                                                        "required": [
-                                                                            "sep",
-                                                                            "parts"
-                                                                        ]
+                                                                        "type": "object"
                                                                     },
                                                                     {
                                                                         "type": "array",
@@ -1860,11 +1886,7 @@
                                                                                     "pattern": "^/.*/$"
                                                                                 },
                                                                                 {
-                                                                                    "type": "object",
-                                                                                    "required": [
-                                                                                        "sep",
-                                                                                        "parts"
-                                                                                    ]
+                                                                                    "type": "object"
                                                                                 }
                                                                             ]
                                                                         }
