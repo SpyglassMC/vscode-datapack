@@ -36,6 +36,7 @@
     "datapack.config.lint.nameOfObjectives": "Enforce a consistent scoreboard objective naming convention.",
     "datapack.config.lint.nameOfTags": "Enforce a consistent entity tag naming convention.",
     "datapack.config.lint.nameOfTeams": "Enforce a consistent team naming convention.",
+    "datapack.config.lint.nameOfScoreHolders": "Enforce a consistent score_holders naming convention.",
     "datapack.config.lint.nbtArrayBracketSpacing": "Enforce spacing inside the square brackets of NBT arrays.",
     "datapack.config.lint.nbtArrayCommaSpacing": "Enforce spacing around commas in NBT arrays. No matter what the settings are, spaces after trailing commas are always removed.",
     "datapack.config.lint.nbtArrayLengthCheck": "Check the length of NBT arrays.",
