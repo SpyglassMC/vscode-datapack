@@ -5,7 +5,7 @@
 
 import { join } from 'path'
 import { commands, DocumentSemanticTokensProvider, ExtensionContext, FileSystemWatcher, languages, RelativePattern, SemanticTokens, SemanticTokensEdits, SemanticTokensLegend, TextDocument, Uri, window, workspace } from 'vscode'
-import { DocumentSelector, LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient'
+import { DocumentSelector, LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient/node'
 
 let client: LanguageClient
 
@@ -99,19 +99,19 @@ export function activate(context: ExtensionContext) {
             }
             context.globalState.update('lastVersion', currentVersion)
         })
-        context.subscriptions.push(
-            languages.registerDocumentSemanticTokensProvider(
-                documentSelector,
-                new LspSemanticTokensProvider(),
-                new SemanticTokensLegend(
-                    ['annotation', 'boolean', 'comment', 'entity', 'keyword', 'literal', 'identity', 'number', 'operator', 'property', 'string', 'type', 'variable', 'vector'],
-                    ['declaration', 'deprecated', 'documentation', 'firstArgument', 'inString']
-                )
-            )/* ,
-            commands.registerTextEditorCommand('datapack.evaludateJavaScript', (textEditor, edit) => {
-                textEditor.
-            }) */
-        )
+        // context.subscriptions.push(
+        //     languages.registerDocumentSemanticTokensProvider(
+        //         documentSelector,
+        //         new LspSemanticTokensProvider(),
+        //         new SemanticTokensLegend(
+        //             ['annotation', 'boolean', 'comment', 'entity', 'keyword', 'literal', 'identity', 'number', 'operator', 'property', 'string', 'type', 'variable', 'vector'],
+        //             ['declaration', 'deprecated', 'documentation', 'firstArgument', 'inString']
+        //         )
+        //     )/* ,
+        //     commands.registerTextEditorCommand('datapack.evaludateJavaScript', (textEditor, edit) => {
+        //         textEditor.
+        //     }) */
+        // )
     })
 
     // if (!context.globalState.get('firstUse')) {
@@ -121,22 +121,22 @@ export function activate(context: ExtensionContext) {
     // context.globalState.update('useAmount', (context.globalState.get('context.globalState') as number ?? 0) + 1)
 }
 
-class LspSemanticTokensProvider implements DocumentSemanticTokensProvider {
-    async provideDocumentSemanticTokens(document: TextDocument): Promise<SemanticTokens> {
-        const response = await client.sendRequest<{ resultId?: string, data: number[] }>('textDocument/semanticTokens', { textDocument: { uri: document.uri.toString() } })
-        return { resultId: response.resultId, data: new Uint32Array(response.data) }
-    }
-    async provideDocumentSemanticTokensEdits(document: TextDocument, previousResultId: string): Promise<SemanticTokens | SemanticTokensEdits> {
-        type LspSemanticTokens = { resultId?: string, data: number[] }
-        type LspSemanticTokensEdits = { resultId?: string, edits: { start: number, deleteCount: number, data?: number[] }[] }
-        const response = await client.sendRequest<LspSemanticTokens | LspSemanticTokensEdits>('textDocument/semanticTokens/edits', { textDocument: { uri: document.uri.toString() }, previousResultId })
-        if ((response as LspSemanticTokens).data) {
-            return { resultId: response.resultId, data: new Uint32Array((response as LspSemanticTokens).data) }
-        } else {
-            return { resultId: response.resultId, edits: (response as LspSemanticTokensEdits).edits.map(v => ({ start: v.start, deleteCount: v.deleteCount, data: v.data ? new Uint32Array(v.data) : undefined })) }
-        }
-    }
-}
+// class LspSemanticTokensProvider implements DocumentSemanticTokensProvider {
+//     async provideDocumentSemanticTokens(document: TextDocument): Promise<SemanticTokens> {
+//         const response = await client.sendRequest<{ resultId?: string, data: number[] }>('textDocument/semanticTokens', { textDocument: { uri: document.uri.toString() } })
+//         return { resultId: response.resultId, data: new Uint32Array(response.data) }
+//     }
+//     async provideDocumentSemanticTokensEdits(document: TextDocument, previousResultId: string): Promise<SemanticTokens | SemanticTokensEdits> {
+//         type LspSemanticTokens = { resultId?: string, data: number[] }
+//         type LspSemanticTokensEdits = { resultId?: string, edits: { start: number, deleteCount: number, data?: number[] }[] }
+//         const response = await client.sendRequest<LspSemanticTokens | LspSemanticTokensEdits>('textDocument/semanticTokens/edits', { textDocument: { uri: document.uri.toString() }, previousResultId })
+//         if ((response as LspSemanticTokens).data) {
+//             return { resultId: response.resultId, data: new Uint32Array((response as LspSemanticTokens).data) }
+//         } else {
+//             return { resultId: response.resultId, edits: (response as LspSemanticTokensEdits).edits.map(v => ({ start: v.start, deleteCount: v.deleteCount, data: v.data ? new Uint32Array(v.data) : undefined })) }
+//         }
+//     }
+// }
 
 function getVSCodeLanguage() {
     if (process.env.VSCODE_NLS_CONFIG) {
