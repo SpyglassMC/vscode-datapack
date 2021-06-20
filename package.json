@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "^3.3.9",
+        "@spgoding/datapack-language-server": "^3.3.10",
         "vscode-languageclient": "^7.0.0"
     },
     "devDependencies": {
