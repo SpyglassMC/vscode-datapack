@@ -1,6 +1,6 @@
 {
     "name": "datapack-language-server",
-    "version": "3.3.23",
+    "version": "3.3.24",
     "main": "dist/extension.js",
     "author": "SPGoding",
     "publisher": "SPGoding",
@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "3.3.21",
+        "@spgoding/datapack-language-server": "3.3.22",
         "vscode-languageclient": "^7.0.0"
     },
     "devDependencies": {
@@ -78,6 +78,7 @@
                     "data/*/predicates/*.json",
                     "data/*/recipes/*.json",
                     "data/*/tags/*.json",
+                    "data/*/worldgen/*.json",
                     "data/minecraft/*.json"
                 ],
                 "url": "./resource/empty-object.json"
@@ -238,7 +239,8 @@
                         "1.16",
                         "1.17",
                         "1.18",
-                        "1.18.2"
+                        "1.18.2",
+                        "1.19"
                     ],
                     "markdownDescription": "%datapack.config.env.cmdVersion%",
                     "default": "1.18.2"
@@ -282,7 +284,8 @@
                         "1.16",
                         "1.17",
                         "1.18",
-                        "1.18.2"
+                        "1.18.2",
+                        "1.19"
                     ],
                     "markdownDescription": "%datapack.config.env.jsonVersion%",
                     "default": "1.18.2"
