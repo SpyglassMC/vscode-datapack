@@ -9,6 +9,16 @@
             "}"
         ]
     ],
+    "colorizedBracketPairs": [
+        [
+            "[",
+            "]"
+        ],
+        [
+            "{",
+            "}"
+        ]
+    ],
     "comments": {
         "lineComment": "#"
     },
