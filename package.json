@@ -1,6 +1,6 @@
 {
     "name": "datapack-language-server",
-    "version": "3.3.35",
+    "version": "3.3.36",
     "main": "dist/extension.js",
     "author": "SPGoding",
     "publisher": "SPGoding",
@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "3.3.33",
+        "@spgoding/datapack-language-server": "3.3.34",
         "vscode-languageclient": "^7.0.0"
     },
     "devDependencies": {
