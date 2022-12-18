@@ -1,6 +1,6 @@
 {
     "name": "datapack-language-server",
-    "version": "3.3.39",
+    "version": "3.3.40",
     "main": "dist/extension.js",
     "author": "SPGoding",
     "publisher": "SPGoding",
@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "3.3.37",
+        "@spgoding/datapack-language-server": "3.3.38",
         "vscode-languageclient": "^7.0.0"
     },
     "devDependencies": {
@@ -240,10 +240,11 @@
                         "1.17",
                         "1.18",
                         "1.18.2",
-                        "1.19"
+                        "1.19",
+                        "1.19.3"
                     ],
                     "markdownDescription": "%datapack.config.env.cmdVersion%",
-                    "default": "1.19"
+                    "default": "1.19.3"
                 },
                 "datapack.env.dataSource": {
                     "type": "string",
@@ -285,10 +286,11 @@
                         "1.17",
                         "1.18",
                         "1.18.2",
-                        "1.19"
+                        "1.19",
+                        "1.19.3"
                     ],
                     "markdownDescription": "%datapack.config.env.jsonVersion%",
-                    "default": "1.19"
+                    "default": "1.19.3"
                 },
                 "datapack.env.exclude": {
                     "type": "array",
