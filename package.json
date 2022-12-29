@@ -1,12 +1,12 @@
 {
     "name": "datapack-language-server",
-    "version": "3.4.0",
+    "version": "3.4.1",
     "main": "dist/extension.js",
     "author": "SPGoding",
     "publisher": "SPGoding",
     "license": "MIT",
     "scripts": {
-        "build": "webpack",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider webpack",
         "build:dev": "webpack --mode=\"development\"",
         "build:profile": "webpack --profile --json > dist/stats.json",
         "commit": "gitmoji -c",
@@ -17,7 +17,7 @@
         "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "3.4.0",
+        "@spgoding/datapack-language-server": "3.4.1",
         "vscode-languageclient": "^7.0.0"
     },
     "devDependencies": {
