@@ -1,6 +1,6 @@
 {
     "name": "datapack-language-server",
-    "version": "3.4.9",
+    "version": "3.4.11",
     "main": "dist/extension.js",
     "author": "SPGoding",
     "publisher": "SPGoding",
@@ -17,7 +17,7 @@
         "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "3.4.9",
+        "@spgoding/datapack-language-server": "3.4.11",
         "vscode-languageclient": "^7.0.0"
     },
     "devDependencies": {
@@ -245,19 +245,11 @@
                         "1.18.2",
                         "1.19",
                         "1.19.3",
-                        "1.19.4"
+                        "1.19.4",
+                        "1.20"
                     ],
                     "markdownDescription": "%datapack.config.env.cmdVersion%",
-                    "default": "1.19.3"
-                },
-                "datapack.env.dataSource": {
-                    "type": "string",
-                    "enum": [
-                        "GitHub",
-                        "码云"
-                    ],
-                    "markdownDescription": "%datapack.config.env.dataSource%",
-                    "default": "GitHub"
+                    "default": "1.19.4"
                 },
                 "datapack.env.dataVersion": {
                     "anyOf": [
