@@ -1,35 +1,32 @@
 name: Release
 on:
-  push:
-    branches:
-      - released
+  workflow_dispatch:
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
   GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
   GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
+  OVSX_PAT: ${{ secrets.OVSX_PAT }}
   VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
 jobs:
   release:
-    name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Cache Node Modules
-        uses: actions/cache@v1
+      - uses: actions/checkout@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-            ${{ runner.os }}-
+          ref: 'legacy-v3'
 
-      - name: Install Dependencies
-        run: npm i -f
+      - uses: actions/setup-node@v3
+        with:
+          node-version: node
 
-      - name: Release
-        run: |
-          rm -rf dist
+      - run: |
+          npm ci
+          npm i @spgoding/datapack-language-server@latest --save-exact
+          npm version patch --git-tag-version=false
           npm run build
-          npm run release
+          git add .
+          git commit -m "released"
+          npx vsce publish
+          ./script/removeExtensionDependencies.mjs
+          npx ovsx publish
+          git push
