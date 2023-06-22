@@ -2,13 +2,10 @@ name: Release
 on:
   workflow_dispatch:
 env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
   GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
   GIT_AUTHOR_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
   GIT_COMMITTER_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
   GIT_COMMITTER_NAME: ${{ secrets.GIT_AUTHOR_NAME }}
-  OVSX_PAT: ${{ secrets.OVSX_PAT }}
-  VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -28,7 +25,15 @@ jobs:
           npm run build
           git add .
           git commit -m "released"
-          npx vsce publish
+
+      - run: npx vsce publish
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+      
+      - run: |
           ./script/removeExtensionDependencies.mjs
           npx ovsx publish
-          git push
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+
+      - run: git push
