@@ -249,7 +249,7 @@
                         "1.20"
                     ],
                     "markdownDescription": "%datapack.config.env.cmdVersion%",
-                    "default": "1.19.4"
+                    "default": "1.20"
                 },
                 "datapack.env.dataVersion": {
                     "anyOf": [
