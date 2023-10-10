@@ -112,7 +112,7 @@ If you'd like to help us translate this project into other languages, it would b
 > Wiki: https://github.com/SPGoding/datapack-language-server/wiki/Semantic-Coloring
 
 All command arguments can be colored semantically. We also encourage you to install
-[Arcensoth](https://github.com/Arcensotj)'s [language-mcfunction extension](https://github.com/Arcensoth/language-mcfunction)
+the [syntax-mcfunction extension](https://github.com/MinecraftCommands/syntax-mcfunction)
 to get instant coloring feedback.
 
 ![semantic-coloring](https://raw.githubusercontent.com/SPGoding/vscode-datapack-helper-plus/master/img/semantic-coloring.png)
