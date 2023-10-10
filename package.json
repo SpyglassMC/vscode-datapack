@@ -6,18 +6,18 @@
     "publisher": "SPGoding",
     "license": "MIT",
     "scripts": {
-        "build": "NODE_OPTIONS=--openssl-legacy-provider webpack",
-        "build:dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode=\"development\"",
-        "build:profile": "NODE_OPTIONS=--openssl-legacy-provider webpack --profile --json > dist/stats.json",
+        "build": "webpack",
+        "build:dev": "webpack --mode=\"development\"",
+        "build:profile": "webpack --profile --json > dist/stats.json",
         "commit": "gitmoji -c",
         "lint": "eslint --fix src/**/*.ts",
         "lint:dry": "eslint --fix-dry-run src/**/*.ts",
         "release": "semantic-release",
         "release:dry": "semantic-release --dry-run",
-        "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch --mode=\"development\""
+        "watch": "webpack --watch --mode=\"development\""
     },
     "dependencies": {
-        "@spgoding/datapack-language-server": "3.4.16",
+        "@spgoding/datapack-language-server": "3.4.17",
         "vscode-languageclient": "^7.0.0"
     },
     "devDependencies": {
