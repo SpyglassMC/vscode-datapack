@@ -43,7 +43,7 @@
         "webpack-cli": "^3.3.11"
     },
     "extensionDependencies": [
-        "arcensoth.language-mcfunction"
+        "minecraftcommands.syntax-mcfunction"
     ],
     "repository": {
         "type": "git",
